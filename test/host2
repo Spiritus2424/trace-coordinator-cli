@@ -1,0 +1,9 @@
+[all:vars]
+ansible_connection=ssh
+
+[master]
+remote-master
+
+[workers]
+test2-remote-worker-1
+test2-remote-worker-2

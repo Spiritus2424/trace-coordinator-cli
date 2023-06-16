@@ -1,0 +1,17 @@
+trace-servers:
+- filter: null
+  host: test1-remote-worker-1
+  port: 8080
+  traces-path: [cas, sadsa]
+- filter: null
+  host: test1-remote-worker-2
+  port: 8080
+  traces-path: [cas, sadsa]
+- filter: null
+  host: test2-remote-worker-1
+  port: 8080
+  traces-path: [cas, sadsa]
+- filter: null
+  host: test2-remote-worker-2
+  port: 8080
+  traces-path: [cas, sadsa]
