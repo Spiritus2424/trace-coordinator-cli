@@ -15,3 +15,4 @@ trace-servers:
   host: test2-remote-worker-2
   port: 8080
   traces-path: [cas, sadsa]
+

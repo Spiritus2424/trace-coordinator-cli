@@ -9,6 +9,7 @@ def main():
     pass
 
 main.add_command(commands.generate_config)
+main.add_command(commands.add_experiment)
 
 if __name__ == '__main__':
     main()
