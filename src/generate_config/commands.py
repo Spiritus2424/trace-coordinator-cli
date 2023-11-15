@@ -1,4 +1,4 @@
-from click import command, argument, option, Path, prompt
+from click import command, argument, option, Path, group, version_option
 from ansible.inventory.manager import InventoryManager
 from ansible.parsing.dataloader import DataLoader
 from ruamel.yaml import YAML
@@ -6,7 +6,16 @@ from ruamel.yaml import YAML
 from generate_config.trace_server import TraceServer
 from generate_config.experiment import Experiment
 
-@command(name="generate")
+
+CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
+
+@group(context_settings=CONTEXT_SETTINGS)
+@version_option(version='1.0.0')
+def config_cli():
+    pass
+
+
+@config_cli.command(name="generate")
 @argument('hosts-files', type=Path(exists=True), nargs=-1)
 @option('--trace-path', type=str, prompt=True)
 @option('--filter', type=str)
@@ -35,7 +44,7 @@ def generate_config(hosts_files: list, trace_path: str, filter: str, output_dire
     print(f"'{output_file_name}' generated successfully.")
 
 
-@command(name="add-experiment")
+@config_cli.command(name="add-experiment")
 @argument('config-file', type=Path(exists=True))
 @option('--experiment-name', type=str, prompt=True)
 @option('--trace-path', type=str, prompt=True)
