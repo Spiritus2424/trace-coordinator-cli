@@ -1,9 +1,13 @@
-from click import CommandCollection
-from generate_config.commands import config_cli
-from benchmark.commands import benchmark_cli
+from click import group
+from generate_config.commands import coordinator
+from benchmark.commands import benchmark
 
+@group()
+def cli():
+    pass
 
-cli = CommandCollection(sources=[benchmark_cli, config_cli])
+cli.add_command(coordinator)
+cli.add_command(benchmark)
 
 if __name__ == '__main__':
     cli()

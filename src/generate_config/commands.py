@@ -11,11 +11,12 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
 @group(context_settings=CONTEXT_SETTINGS)
 @version_option(version='1.0.0')
-def config_cli():
+def coordinator():
+    """Create Cordinator Configuration file"""
     pass
 
 
-@config_cli.command(name="generate")
+@coordinator.command(name="generate")
 @argument('hosts-files', type=Path(exists=True), nargs=-1)
 @option('--trace-path', type=str, prompt=True)
 @option('--filter', type=str)
@@ -44,7 +45,7 @@ def generate_config(hosts_files: list, trace_path: str, filter: str, output_dire
     print(f"'{output_file_name}' generated successfully.")
 
 
-@config_cli.command(name="add-experiment")
+@coordinator.command(name="add-experiment")
 @argument('config-file', type=Path(exists=True))
 @option('--experiment-name', type=str, prompt=True)
 @option('--trace-path', type=str, prompt=True)
