@@ -5,11 +5,13 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
 @group(context_settings=CONTEXT_SETTINGS)
 @version_option(version='1.0.0')
-# @option('--ip', type=str, default='localhost', help='IP address of trace server')
-# @option('--port', '-p', type=int, default=8080, help='Port of trace server')
+@option('--ip', type=str, default='localhost', help='IP address of trace server')
+@option('--port', '-p', type=int, default=8080, help='Port of trace server')
 def benchmark():
     """Benchmark commands."""
     pass
+
+
 
 
 @benchmark.command(name="open-trace")
