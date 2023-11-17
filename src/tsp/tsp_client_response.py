@@ -47,3 +47,6 @@ class TspClientResponse:
 
         # The status message
         self.status_text = status_text
+    
+    def is_ok(self):
+        return self.status_code >= 200 and self.status_code < 400
