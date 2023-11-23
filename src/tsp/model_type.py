@@ -31,7 +31,7 @@ class ModelType(Enum):
     '''
 
     TIME_GRAPH_TREE = "time_graph_tree"
-    TIME_GRAPH_STATES = "time_graph_states"
+    TIME_GRAPH_STATE = "time_graph_state"
     TIME_GRAPH_ARROW = "time_graph_arrow"
     XY_TREE = "xy_tree"
     XY = "xy"

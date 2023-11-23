@@ -22,6 +22,11 @@
 
 """TspClientResponse class file."""
 
+import json
+from tsp.response import GenericResponse, GenericResponseEncoder
+from tsp.output_descriptor_set import OutputDescriptorSet
+from tsp.output_descriptor import OutputDescriptorEncoder
+
 MODEL_KEY = "model"
 OUTPUT_DESCRIPTOR_KEY = "output"
 RESPONSE_STATUS_KEY = "status"
@@ -50,3 +55,28 @@ class TspClientResponse:
     
     def is_ok(self):
         return self.status_code >= 200 and self.status_code < 400
+
+class TspClientResponseEncoder(json.JSONEncoder):
+    
+    def default(self, obj):
+        if isinstance(obj, TspClientResponse):
+            # Convert TspClientResponse to a dictionary
+            if isinstance(obj.model, GenericResponse):
+                return {
+                    'model': GenericResponseEncoder().default(obj.model),
+                    'status_code': obj.status_code,
+                    'status_text': obj.status_text
+                }
+            elif isinstance(obj.model, OutputDescriptorSet):
+                return {
+                    'model': [OutputDescriptorEncoder().default(output_descriptor) for output_descriptor in obj.model.descriptors],
+                    'status_code': obj.status_code,
+                    'status_text': obj.status_text
+                }
+            else:
+                return {
+                    'model': obj.model,
+                    'status_code': obj.status_code,
+                    'status_text': obj.status_text
+                }
+        return super().default(obj)
