@@ -25,15 +25,15 @@ import json
 from tsp.entry import Entry, EntryElementStyleEncoder
 
 TYPE_KEY = "type"
-START_TIME_KEY = "startTime"
-END_TIME_KEY = "endTime"
+START_TIME_KEY = "start"
+END_TIME_KEY = "end"
 HAS_ROW_MODEL_KEY = "hasRowModel"
 ROWS_KEY = "rows"
 ENTRY_ID_KEY = "entryId"
 STATES_KEY = "states"
 DURATION_KEY = "duration"
 LABEL_KEY = "label"
-VALUE_KEY = "value"
+VALUE_KEY = "values"
 TAGS_KEY = "tags"
 STYLE_KEY = "style"
 SOURCE_ID_TAG = "sourceId"
@@ -115,14 +115,15 @@ class TimeGraphState:
         '''
         Start time of the state
         '''
+        print(params)
         if START_TIME_KEY in params:
             self.start_time = params.get(START_TIME_KEY)
             del params[START_TIME_KEY]
 
         # Duration of the state
-        if DURATION_KEY in params:
-            self.duration = params.get(DURATION_KEY)
-            del params[DURATION_KEY]
+        if END_TIME_KEY in params:
+            self.end_time = params.get(END_TIME_KEY)
+            del params[END_TIME_KEY]
 
         # Label to apply to the state
         if LABEL_KEY in params:
@@ -192,9 +193,9 @@ class TimeGraphEntryEncoder(json.JSONEncoder):
                 'labels': obj.labels,
                 'style': EntryElementStyleEncoder().default(obj.style) if obj.style else None,
                 # 'type': obj.type,
-                # 'start_time': obj.start_time,
-                # 'end_time': obj.end_time,
-                # 'has_row_model': obj.has_row_model
+                'start': obj.start_time,
+                'end': obj.end_time,
+                'has_row_model': obj.has_row_model
             }
         return super().default(obj)
 
@@ -219,11 +220,11 @@ class TimeGraphStateEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, TimeGraphState):
             return {
-                'start_time': obj.start_time,
-                'duration': obj.duration,
-                'label': obj.label,
-                'value': obj.value,
-                'tags': obj.tags,
+                'start': obj.start_time,
+                'end': obj.end_time,
+                # 'duration': obj.duration,
+                # 'values': obj.value,
+                # 'tags': obj.tags,
                 'style': obj.style
             }
         return super().default(obj)
