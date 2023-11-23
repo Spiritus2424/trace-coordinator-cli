@@ -95,7 +95,7 @@ class TspClient:
             print("get trace failed: {0}".format(response.status_code))
             return TspClientResponse(None, response.status_code, response.text)
 
-    def open_trace(self, name, path):
+    def open_trace(self, path, name):
         '''
         Open a trace on the server
         parameters: Query object
@@ -115,6 +115,32 @@ class TspClient:
         else:  # pragma: no cover
             print("post trace failed: {0}".format(response.status_code))
             return TspClientResponse(None, response.status_code, response.text)
+
+    def open_traces(self, path, name, max_depth, filter):
+        '''
+        Open a trace on the server
+        parameters: Query object
+        :return: :class:`TspClientResponse <Trace>` object
+        :rtype: TspClientResponse
+        '''
+        api_url = '{0}traces'.format(self.base_url)
+
+        my_parameters = {'name': name, 'uri': path, 'maxDepth': max_depth}
+        parameters = {'parameters': my_parameters}
+
+        response = requests.post(api_url, json=parameters, headers=headers)
+
+        if response.status_code == 200:
+            content = json.loads(response.content.decode('utf-8'))
+            traces = []
+            for trace in content:
+                traces.append(Trace(trace))
+            return TspClientResponse(traces,
+                                     response.status_code, response.text)
+        else:  # pragma: no cover
+            print("post trace failed: {0}".format(response.status_code))
+            return TspClientResponse(None, response.status_code, response.text)
+
 
     def delete_trace(self, uuid, delete_trace, remove_cache=False):
         '''
@@ -284,8 +310,7 @@ class TspClient:
         :returns: :class:  `TspClientResponse <GenericResponse>` object Timegraph entries response
         :rtype: TspClientResponse
         '''
-        api_url = '{0}experiments/{1}/outputs/timeGraph/{2}/tree'.format(
-            self.base_url, exp_uuid, output_id)
+        api_url = f'{self.base_url}experiments/{exp_uuid}/outputs/timeGraph/{output_id}/tree'
 
         params = parameters
         if parameters is None:
@@ -296,6 +321,58 @@ class TspClient:
         if response.status_code == 200:
             return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
                                                      ModelType.TIME_GRAPH_TREE),
+                                     response.status_code, response.text)
+        else:  # pragma: no cover
+            print(GET_TREE_FAILED.format(response.status_code))
+            return TspClientResponse(None, response.status_code, response.text)
+
+
+    def fetch_timegraph_states(self, exp_uuid, output_id, parameters=None):
+        '''
+        Fetch Time Graph States
+        :param exp_uuid: Experiment UUID
+        :param output_id: Output ID
+        :param parameters: Query object
+        :returns: :class:  `TspClientResponse <GenericResponse>` object Timegraph Model response
+        :rtype: TspClientResponse
+        '''
+        api_url = f'{self.base_url}experiments/{exp_uuid}/outputs/timeGraph/{output_id}/states'
+
+        params = parameters
+        if parameters is None:
+            params = {}
+
+        response = requests.post(api_url, json=params, headers=headers)
+
+        if response.status_code == 200:
+            return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
+                                                     ModelType.TIME_GRAPH_STATES),
+                                     response.status_code, response.text)
+        else:  # pragma: no cover
+            print(GET_TREE_FAILED.format(response.status_code))
+            return TspClientResponse(None, response.status_code, response.text)
+
+
+    def fetch_timegraph_arrows(self, exp_uuid, output_id, parameters=None):
+        '''
+        Fetch Time Graph Arrows
+        :param exp_uuid: Experiment UUID
+        :param output_id: Output ID
+        :param parameters: Query object
+        :returns: :class:  `TspClientResponse <GenericResponse>` list of object Timegraph arrows response
+        :rtype: TspClientResponse
+        '''
+        api_url = f'{self.base_url}experiments/{exp_uuid}/outputs/timeGraph/{output_id}/states'
+
+        params = parameters
+        if parameters is None:
+            params = {}
+
+        response = requests.post(api_url, json=params, headers=headers)
+
+        if response.status_code == 200:
+            return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
+                                                     ModelType.TIME_GRAPH_STATES),
                                      response.status_code, response.text)
         else:  # pragma: no cover
             print(GET_TREE_FAILED.format(response.status_code))
