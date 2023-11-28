@@ -270,7 +270,6 @@ class TspClient:
             self.base_url, exp_uuid, output_id)
 
         response = requests.get(api_url, headers=headers)
-
         if response.status_code == 200:
             return TspClientResponse(OutputDescriptor(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason)

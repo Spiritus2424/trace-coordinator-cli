@@ -27,7 +27,7 @@ from tsp.entry import Entry, EntryElementStyleEncoder
 TYPE_KEY = "type"
 START_TIME_KEY = "start"
 END_TIME_KEY = "end"
-HAS_ROW_MODEL_KEY = "hasRowModel"
+HAS_ROW_MODEL_KEY = "hasData"
 ROWS_KEY = "rows"
 ENTRY_ID_KEY = "entryId"
 STATES_KEY = "states"
@@ -93,7 +93,6 @@ class TimeGraphRow:
         '''
         Entry Id associated to the state array
         '''
-        print(params)
         if ENTRY_ID_KEY in params:
             self.entry_id = params.get(ENTRY_ID_KEY)
             del params[ENTRY_ID_KEY]
@@ -115,7 +114,6 @@ class TimeGraphState:
         '''
         Start time of the state
         '''
-        print(params)
         if START_TIME_KEY in params:
             self.start_time = params.get(START_TIME_KEY)
             del params[START_TIME_KEY]
@@ -192,10 +190,9 @@ class TimeGraphEntryEncoder(json.JSONEncoder):
                 'parent_id': obj.parent_id,
                 'labels': obj.labels,
                 'style': EntryElementStyleEncoder().default(obj.style) if obj.style else None,
-                # 'type': obj.type,
                 'start': obj.start_time,
                 'end': obj.end_time,
-                'has_row_model': obj.has_row_model
+                'hasData': obj.has_row_model
             }
         return super().default(obj)
 

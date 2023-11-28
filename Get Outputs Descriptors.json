@@ -329,6 +329,39 @@
             "end": 0,
             "final": 0,
             "compatible_providers": []
+        },
+        {
+            "id": "xml.scenarios",
+            "name": "IRQ Analysis: Scenarios",
+            "description": "Scenarios provided by Analysis module: IRQ Analysis",
+            "type": "TIME_GRAPH",
+            "query_parameters": {},
+            "start": 0,
+            "end": 0,
+            "final": 0,
+            "compatible_providers": []
+        },
+        {
+            "id": "lttng2.kernel.core.futex.scenarios",
+            "name": "Futex Contention Analysis: Scenarios",
+            "description": "Scenarios provided by Analysis module: Futex Contention Analysis",
+            "type": "TIME_GRAPH",
+            "query_parameters": {},
+            "start": 0,
+            "end": 0,
+            "final": 0,
+            "compatible_providers": []
+        },
+        {
+            "id": "lttng2.kernel.core.futex.uaddrvswaiter",
+            "name": "Futex Contention Analysis: Uaddr vs Waiter",
+            "description": "Uaddr vs Waiter provided by Analysis module: Futex Contention Analysis",
+            "type": "TIME_GRAPH",
+            "query_parameters": {},
+            "start": 0,
+            "end": 0,
+            "final": 0,
+            "compatible_providers": []
         }
     ],
     "status_code": 200,
