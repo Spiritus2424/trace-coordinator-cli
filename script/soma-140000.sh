@@ -41,14 +41,14 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
 
 # Get TimeGraph States: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-timegraph-states -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+    get-timegraph-states -v --nb-times 65000 "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"\
         1701205212748171586\
         1701205476581683428
 
 # Get TimeGraph Arrows: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-timegraph-arrows -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+    get-timegraph-arrows -v --nb-times 65000 "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider" \
         1701205212748171586\
         1701205476581683428

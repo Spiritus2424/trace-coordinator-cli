@@ -39,7 +39,7 @@ class TspClientResponse:
     Class that for providing the tsp
     '''
 
-    def __init__(self, model, status, status_text):
+    def __init__(self, model, status, status_text, size=None):
         '''
         Constructor
         '''
@@ -52,6 +52,8 @@ class TspClientResponse:
 
         # The status message
         self.status_text = status_text
+
+        self.size = size
     
     def is_ok(self):
         return self.status_code >= 200 and self.status_code < 400

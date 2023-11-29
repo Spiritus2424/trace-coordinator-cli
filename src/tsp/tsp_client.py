@@ -134,12 +134,13 @@ class TspClient:
         response = requests.post(api_url, json=parameters, headers=headers)
 
         if response.status_code == 200:
+            response_size = len(bytes(response.text, 'utf-8'))
             content = json.loads(response.content.decode('utf-8'))
             traces = []
             for trace in content:
                 traces.append(Trace(trace))
             return TspClientResponse(traces,
-                                     response.status_code, response.reason)
+                                     response.status_code, response.reason, response_size)
         else:  # pragma: no cover
             print("post trace failed: {0}".format(response.status_code))
             return TspClientResponse(None, response.status_code, response.reason)
@@ -323,9 +324,10 @@ class TspClient:
         response = requests.post(api_url, json=params, headers=headers)
 
         if response.status_code == 200:
+            response_size = len(bytes(response.text, 'utf-8'))
             return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
                                                      ModelType.TIME_GRAPH_TREE),
-                                     response.status_code, response.reason)
+                                     response.status_code, response.reason, response_size)
         else:  # pragma: no cover
             print(GET_TREE_FAILED.format(response.status_code))
             return TspClientResponse(None, response.status_code, response.reason)
@@ -351,9 +353,10 @@ class TspClient:
         response = requests.post(api_url, json=params, headers=headers)
 
         if response.status_code == 200:
+            response_size = len(bytes(response.text, 'utf-8'))
             return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
                                                      ModelType.TIME_GRAPH_STATE),
-                                     response.status_code, response.reason)
+                                     response.status_code, response.reason, response_size)
         else:  # pragma: no cover
             print(GET_STATES_FAILED.format(response.status_code))
             return TspClientResponse(None, response.status_code, response.reason)
@@ -379,9 +382,10 @@ class TspClient:
         response = requests.post(api_url, json=params, headers=headers)
 
         if response.status_code == 200:
+            response_size = len(bytes(response.text, 'utf-8'))
             return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
                                                      ModelType.TIME_GRAPH_ARROW),
-                                     response.status_code, response.reason)
+                                     response.status_code, response.reason, response_size)
         else:  # pragma: no cover
             print(GET_ARROWS_FAILED.format(response.status_code))
             return TspClientResponse(None, response.status_code, response.reason)

@@ -53,7 +53,7 @@ def open_trace(tsp_client: TspClient, trace_path: str, trace_name: str, max_dept
             print(trace.UUID)
 
     print(f"Open Trace: {elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Open Trace", elapsed.total_seconds())
+    log_benchmark(tsp_client.base_url, "Open Trace", elapsed.total_seconds(), response.size)
 
 
 
@@ -178,22 +178,24 @@ def get_timegraph_tree(tsp_client: TspClient, uuid: str, output_id: str, body: s
         log_output("Get Timegraph Tree", response)
 
     print(f"Get TimeGraph Tree: {elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get TimeGraph Tree", elapsed.total_seconds())
+    log_benchmark(tsp_client.base_url, "Get TimeGraph Tree", elapsed.total_seconds(), response.size)
 
 @benchmark.command(name="get-timegraph-states")
 @argument('UUID', type=str)
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)
 @argument('END', type=int)
+@option('--nb-times', type=int)
 @option('--body', type=Path(exists=True), help='JSON file that contain the body params for the request')
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_timegraph_states(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, body: str, verbose: bool):
+def get_timegraph_states(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, nb_times: int,  body: str, verbose: bool):
     parameters = {
             "parameters": {
                 "requested_timerange": {
                     "start": start,
-                    "end": end
+                    "end": end,
+                    "nbTimes": nb_times
                 }
             }
         }
@@ -209,7 +211,7 @@ def get_timegraph_states(tsp_client: TspClient, uuid: str, output_id: str, start
         log_output("Get Timegraph States", response)
 
     print(f"Get TimeGraph States: {elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get TimeGraph States", elapsed.total_seconds())
+    log_benchmark(tsp_client.base_url, "Get TimeGraph States", elapsed.total_seconds(), response.size)
     
 
 @benchmark.command(name="get-timegraph-arrows")
@@ -217,15 +219,25 @@ def get_timegraph_states(tsp_client: TspClient, uuid: str, output_id: str, start
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)
 @argument('END', type=int)
+@option('--nb-times', type=int)
 @option('--body', type=Path(exists=True), help='JSON file that contain the body params for the request')
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_timegraph_arrows(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, body: str, verbose: bool):
+def get_timegraph_arrows(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, nb_times: int, body: str, verbose: bool):
+    parameters = {
+            "parameters": {
+                "requested_timerange": {
+                    "start": start,
+                    "end": end,
+                    "nbTimes": nb_times
+                }
+            }
+        }
     start = datetime.now()
-    response = tsp_client.fetch_timegraph_arrows(uuid, output_id)
+    response = tsp_client.fetch_timegraph_arrows(uuid, output_id, parameters)
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
         sleep(0.2) # 200ms
-        response = tsp_client.fetch_timegraph_arrows(uuid, output_id)
+        response = tsp_client.fetch_timegraph_arrows(uuid, output_id, parameters)
     
     end = datetime.now()
     elapsed = end - start
@@ -233,7 +245,7 @@ def get_timegraph_arrows(tsp_client: TspClient, uuid: str, output_id: str, start
         log_output("Get Timegraph Arrows", response)
 
     print(f"Get TimeGraph Arrows: {elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get TimeGraph Arrows", elapsed.total_seconds())
+    log_benchmark(tsp_client.base_url, "Get TimeGraph Arrows", elapsed.total_seconds(), response.size)
 
 
 @benchmark.command(name="get-xy-tree")
@@ -253,11 +265,10 @@ def get_xy(tsp_client: TspClient, body: str):
     pass
 
 
-
-def log_benchmark(target, endpoint, elapsed_time):
+def log_benchmark(target, endpoint, elapsed_time, response_size = None):
     with open('benchmark-tsp.csv', '+a', encoding='utf-8') as benchmark_file:
         writer = csv.writer(benchmark_file)
-        writer.writerow([target, endpoint, elapsed_time])
+        writer.writerow([target, endpoint, elapsed_time, response_size])
 
 def log_output(endpoint, data):
     with open(f'{endpoint}.json', '+w', encoding='utf-8') as log_file:

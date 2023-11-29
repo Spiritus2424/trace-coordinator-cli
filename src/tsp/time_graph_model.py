@@ -37,7 +37,7 @@ VALUE_KEY = "values"
 TAGS_KEY = "tags"
 STYLE_KEY = "style"
 SOURCE_ID_TAG = "sourceId"
-DESTINATION_ID_TAG = "destinationId"
+TARGET_ID_TAG = "targetId"
 
 # pylint: disable=too-few-public-methods
 
@@ -158,14 +158,19 @@ class TimeGraphArrow:
             del params[SOURCE_ID_TAG]
 
         # Destination entry Id for the arrow
-        if DESTINATION_ID_TAG in params:
-            self.destination_id = params.get(DESTINATION_ID_TAG)
-            del params[DESTINATION_ID_TAG]
+        if TARGET_ID_TAG in params:
+            self.target_id = params.get(TARGET_ID_TAG)
+            del params[TARGET_ID_TAG]
 
         # Start time of the arrow
         if START_TIME_KEY in params:
-            self.start_time = params.get(START_TIME_KEY)
+            self.start = params.get(START_TIME_KEY)
             del params[START_TIME_KEY]
+
+        # Duration of the state
+        if END_TIME_KEY in params:
+            self.end = params.get(END_TIME_KEY)
+            del params[END_TIME_KEY]
 
         # Duration of the arrow
         if DURATION_KEY in params:
@@ -230,11 +235,10 @@ class TimeGraphArrowEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, TimeGraphArrow):
             return {
-                'source_id': obj.source_id,
-                'destination_id': obj.destination_id,
-                'start_time': obj.start_time,
-                'duration': obj.duration,
-                'value': obj.value,
+                'sourceId': obj.source_id,
+                'targetId': obj.target_id,
+                'start': obj.start,
+                'end': obj.end,
                 'style': obj.style
             }
         return super().default(obj)
