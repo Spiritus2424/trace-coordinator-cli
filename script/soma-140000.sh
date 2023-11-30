@@ -1,33 +1,34 @@
 #!/bin/sh
-IP="172.17.0.1"
-PORT=8080
+IP="l4714-01.info.polymtl.ca"
+PORT=5000
 # Open Traces
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    open-trace -v --max-depth=1 /home/spiritus/ws/trace-coordinator/traces/hpc-soma-140000
+    open-trace -v --max-depth=1 /traces
 
 # Create Experiment
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     create-experiment -v "Experiment Name" \
-        --uuids "2555ab54-1c49-3b3d-a891-02fea0eed441"\
-        --uuids "a125f3f2-288f-345b-8921-5c0716e27f30"\
-        --uuids "d85badd5-67c2-36df-aedc-aff9456a4992"\
-        --uuids "ed94a71b-172e-3979-97d3-3a26fc7d86a4"\
-        --uuids "79f0e3aa-9030-3166-b2fa-f1f23bae2d1c"\
-        --uuids "1c374a28-1f39-368a-8fa2-340a6b3dc4c2"\
-        --uuids "efd48902-808e-310e-beb0-383d9aaf80ef"\
-        --uuids "5f5badd4-cbbc-3f9a-8b41-a291b0033a44"\
-        --uuids "58211610-d2eb-3686-a331-cfb6d43ecbe5"\
-        --uuids "62ee2393-4568-3232-b53a-1c039aed7efa"\
-        --uuids "da13cfda-ce48-3c51-a7a3-3c5ed8ba29e9"\
-        --uuids "c02a8e66-d1c6-359b-ae30-ca9ffa598825"\
-        --uuids "795d29af-0c7c-3fda-9d50-e2ed709ea324"\
-        --uuids "34f49521-ed74-3cd3-82a9-43c0e468dbc7"\
-        --uuids "9a5ff73d-1ef7-3509-bfe9-f4cfc0abd4d1"\
-        --uuids "98a0470a-3d64-381f-82d0-c99f12e1e70f"\
-        --uuids "4559b756-5fc4-3d5b-a444-9fc690fc7878"\
-        --uuids "9268504c-72b5-3a80-a1a8-231a1737b28e"\
-        --uuids "a58051e6-a6e5-35ab-ad9c-ad7d3bb7d610"\
-        --uuids "c120baf7-b0e7-34b9-8493-7dbb162a6675"
+        --uuids "65c6e2e6-9910-3005-89df-1a25943e010c" \
+        --uuids "2f9603ec-67af-3277-a9ab-308060795960" \
+        --uuids "26407711-f072-38e4-ad99-b6116d23ad99" \
+        --uuids "e6ff175d-ff54-3945-bb02-1159e4a0e5aa" \
+        --uuids "eb356fe2-cb50-3ce5-9b0a-f53829de6672" \
+        --uuids "cc8216bd-3f73-3e77-8ef4-d0595891150a" \
+        --uuids "29980495-6d16-37f9-a9df-3a9f8acf8cae" \
+        --uuids "031d7f5f-35be-3164-9963-6b1b5f2b182e" \
+        --uuids "f419a3b4-411a-3e33-b7ae-fabd2e368aa8" \
+        --uuids "e2442361-1282-3b7b-b6ff-e77992492100" \
+        --uuids "be0367bc-65cd-34a3-9f6a-77d2218bca89" \
+        --uuids "4e82d256-fe9e-3648-8cab-aea381f00028" \
+        --uuids "3b912096-e874-3cd6-971b-6a06e472bf65" \
+        --uuids "fb745074-a75b-3ea6-aa7c-c95994dfcbb5" \
+        --uuids "9aadd930-cf2a-3fe5-aaa8-f96aae2a8c95" \
+        --uuids "3dd49b48-a7a4-3d5f-b7e8-7b039bac14b8" \
+        --uuids "fcc77e94-c876-33c4-84db-d133393beae3" \
+        --uuids "d5938817-0a0f-3e24-a360-1eeccf4a7a19" \
+        --uuids "2fa00ea7-a4f4-3f40-bd98-9e30b395c7cf" \
+        --uuids "c5e8c3cf-1f59-3f0b-a7c1-5d15d07e5b78"
+
 
 # Get Output Descriptors
 trace-coordinator benchmark -d --ip $IP -p $PORT \
