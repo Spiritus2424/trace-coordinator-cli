@@ -1,61 +1,71 @@
 #!/bin/sh
-IP="172.17.0.1"
+# IP="l4714-05.info.polymtl.ca"
+# PORT=5000
+IP="172.17.0.3"
 PORT=8080
 # Open Traces
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    open-trace -v --max-depth=1 /home/spiritus/ws/trace-coordinator/traces/hpc-soma-50000-test
+    open-trace -v --max-depth=1 /home/traces
 
 # Create Experiment
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     create-experiment -v "Experiment Name" \
-        --uuids "68c43d1c-1880-39e0-bc9e-ad00621c0785"\
-        --uuids "3044f59d-d89e-33c8-8a3d-211f11c63d57"\
-        --uuids "c28df1fc-ce8d-3edd-9328-a0d808c243a1"\
-        --uuids "d5036461-85b9-352c-8abc-ea74772f46a8"\
-        --uuids "30d78cdd-69cd-32df-be2d-41f2d3137e41"\
-        --uuids "4c8970c4-20c6-3242-b85d-77c7dc9ad342"\
-        --uuids "a3849d88-aa02-3f16-8786-f5f1d62faa16"\
-        --uuids "b5fced73-e7f2-3b5a-b103-3e4c917e2420"\
-        --uuids "e8a5e1e5-bc29-3142-932c-7e0a15295b88"\
-        --uuids "6a084b3c-17bf-3839-ab90-66967521bdc0"\
-        --uuids "b76826c4-a33d-3cba-b8de-02f2f726f2c7"\
-        --uuids "e72f0761-dc49-3706-a84a-715595f9b9f1"\
-        --uuids "c057c1a5-7f78-3934-9d76-a12cb2776628"\
-        --uuids "31ee5a6d-758b-3620-8279-be35f67f41ee"\
-        --uuids "b82303ec-803c-36ed-a59d-8a492e499044"\
-        --uuids "5dc005e1-549c-3c41-85d2-6d205575e0d3"\
-        --uuids "e369e8a0-dd43-3754-a065-d4c91be72fd2"\
-        --uuids "277acdbe-fbff-3777-852a-bd3f30f35f26"\
-        --uuids "29c1940b-4c34-3d3b-b3da-f70d4eb8e7ea"\
-        --uuids "2076f5cf-f32f-3a30-84b8-d1960522385d"\
-        --uuids "6386d4fe-a58c-340e-8928-4078fb734046"\
-        --uuids "d987b9d3-e75c-3ee8-ba45-e7510fe3730f"
+        --uuids "a28424cc-9fe0-32e0-b08b-0b187690c752" \
+        --uuids "78b17b4e-c1fb-3b0f-83f8-45d979b6d29c" \
+        --uuids "013e1ba1-cf97-37d8-9e64-0e50a0efb16b" \
+        --uuids "1a273b53-3b48-33bc-8390-dea35fa19f71" 
+        
+#         --uuids "2555ab54-1c49-3b3d-a891-02fea0eed441" 
+        # --uuids "a125f3f2-288f-345b-8921-5c0716e27f30" \
+        # --uuids "d85badd5-67c2-36df-aedc-aff9456a4992" \
+        # --uuids "ed94a71b-172e-3979-97d3-3a26fc7d86a4" \
+        # --uuids "79f0e3aa-9030-3166-b2fa-f1f23bae2d1c" \
+        # --uuids "1c374a28-1f39-368a-8fa2-340a6b3dc4c2" \
+        # --uuids "efd48902-808e-310e-beb0-383d9aaf80ef" \
+        # --uuids "5f5badd4-cbbc-3f9a-8b41-a291b0033a44" \
+        # --uuids "58211610-d2eb-3686-a331-cfb6d43ecbe5" \
+        # --uuids "62ee2393-4568-3232-b53a-1c039aed7efa" \
+        # --uuids "da13cfda-ce48-3c51-a7a3-3c5ed8ba29e9" \
+        # --uuids "c02a8e66-d1c6-359b-ae30-ca9ffa598825" \
+        # --uuids "795d29af-0c7c-3fda-9d50-e2ed709ea324" \
+        # --uuids "34f49521-ed74-3cd3-82a9-43c0e468dbc7" \
+        # --uuids "9a5ff73d-1ef7-3509-bfe9-f4cfc0abd4d1" \
+        # --uuids "98a0470a-3d64-381f-82d0-c99f12e1e70f" \
+        # --uuids "4559b756-5fc4-3d5b-a444-9fc690fc7878" \
+        # --uuids "9268504c-72b5-3a80-a1a8-231a1737b28e" \
+        # --uuids "a58051e6-a6e5-35ab-ad9c-ad7d3bb7d610" \
+        # --uuids "c120baf7-b0e7-34b9-8493-7dbb162a6675" 
 
-        # --uuids "c28df1fc-ce8d-3edd-9328-a0d808c243a1"\
-        # --uuids "d5036461-85b9-352c-8abc-ea74772f46a8"\
-        # --uuids "b5fced73-e7f2-3b5a-b103-3e4c917e2420"
-
-# Get Output Descriptors
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-outputs -v cde21a0a-35cd-37d4-8fdc-d1ecad068f6b
+# 79f0e3aa-9030-3166-b2fa-f1f23bae2d1c
+# 62ee2393-4568-3232-b53a-1c039aed7efa
+# 9a5ff73d-1ef7-3509-bfe9-f4cfc0abd4d1
+# 9268504c-72b5-3a80-a1a8-231a1737b28e
 
 
-# Get TimeGraph Tree: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-timegraph-tree -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"
 
-# Get TimeGraph States: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-timegraph-states -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"\
-        1699213295226380545\
-        1699213811275474102
 
-# Get TimeGraph Arrows: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-timegraph-arrows -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider" \
-        1699213295226380545 \
-        1699213811275474102
+
+# # Get Output Descriptors
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-outputs -v cde21a0a-35cd-37d4-8fdc-d1ecad068f6b
+
+
+# # Get TimeGraph Tree: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-timegraph-tree -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+#         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"
+
+# # Get TimeGraph States: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-timegraph-states -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+#         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"\
+#         1699213295226380545\
+#         1699213811275474102
+
+# # Get TimeGraph Arrows: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-timegraph-arrows -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+#         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider" \
+#         1699213295226380545 \
+#         1699213811275474102
 

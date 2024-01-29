@@ -1,0 +1,18 @@
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.67506,4181
+http://172.17.0.3:8080/tsp/api/,Create Experiment,57.440468,
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.061793,
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,3.672199,2379767
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,57.466723,196931815
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,17.283113,18554401
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.705638,4181
+http://172.17.0.3:8080/tsp/api/,Create Experiment,59.260949,
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.067629,
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,1.869299,2379767
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,63.187659,196931815
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,24.074497,18554401
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.738918,4181
+http://172.17.0.3:8080/tsp/api/,Create Experiment,59.26195,
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.287601,
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,2.012744,2379767
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,54.564531,196931815
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,15.624844,18554401

@@ -11,7 +11,7 @@ import csv
 
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
-tsp_client_cached = None
+POLLING_TIME = 1
 
 
 
@@ -95,7 +95,7 @@ def open_experiment(tsp_client: TspClient, experiment_name: str, uuids: list, bo
     start = datetime.now()
     response = tsp_client.open_experiment(experiment_name, uuids)
     while response.is_ok() and response.model.indexing_status != IndexingStatus.COMPLETED:
-        sleep(0.2) # 200ms
+        sleep(POLLING_TIME) # 200ms
         response = tsp_client.fetch_experiment(response.model.UUID)
     end = datetime.now()
     elapsed = end - start
@@ -115,12 +115,12 @@ def get_experiment(tsp_client: TspClient, uuid: str, verbose: bool):
     if uuid == None:
         response = tsp_client.fetch_experiments()
         while response.is_ok() and response.model.indexing_status != IndexingStatus.COMPLETED:
-            sleep(0.2) # 200ms
+            sleep(POLLING_TIME) # 200ms
             response = tsp_client.fetch_experiments()
     else:
         response = tsp_client.fetch_experiment(uuid)
         while response.is_ok() and response.model.indexing_status != IndexingStatus.COMPLETED.value:
-            sleep(0.2) # 200ms
+            sleep(POLLING_TIME) # 200ms
             response = tsp_client.fetch_experiments(response.model.UUID)
     end = datetime.now()
     elapsed = end - start
@@ -168,7 +168,7 @@ def get_timegraph_tree(tsp_client: TspClient, uuid: str, output_id: str, body: s
     response = tsp_client.fetch_timegraph_tree(uuid, output_id, None)
 
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
-        sleep(0.2) # 200ms
+        sleep(POLLING_TIME) # 200ms
         response = tsp_client.fetch_timegraph_tree(uuid, output_id)    
     
     end = datetime.now()
@@ -202,7 +202,7 @@ def get_timegraph_states(tsp_client: TspClient, uuid: str, output_id: str, start
     start = datetime.now()
     response = tsp_client.fetch_timegraph_states(uuid, output_id, parameters)
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
-        sleep(0.2) # 200ms
+        sleep(POLLING_TIME) # 200ms
         response = tsp_client.fetch_timegraph_states(uuid, output_id, parameters)
     
     end = datetime.now()
@@ -236,7 +236,7 @@ def get_timegraph_arrows(tsp_client: TspClient, uuid: str, output_id: str, start
     start = datetime.now()
     response = tsp_client.fetch_timegraph_arrows(uuid, output_id, parameters)
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
-        sleep(0.2) # 200ms
+        sleep(POLLING_TIME) # 200ms
         response = tsp_client.fetch_timegraph_arrows(uuid, output_id, parameters)
     
     end = datetime.now()
@@ -252,17 +252,52 @@ def get_timegraph_arrows(tsp_client: TspClient, uuid: str, output_id: str, start
 @argument('UUID', type=str)
 @argument('OUTPUT_ID', type=str)
 @option('--body', type=Path(exists=True), help='JSON file that contain the body params for the request')
+@option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_xy_tree(tsp_client: TspClient, body: str):
-    pass
+def get_xy_tree(tsp_client: TspClient, uuid: str, output_id: str, body: str, verbose: bool):
+    start = datetime.now()
+    response = tsp_client.fetch_xy_tree(uuid, output_id, None)
+
+    while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
+        sleep(POLLING_TIME) # 200ms
+        response = tsp_client.fetch_xy_tree(uuid, output_id)    
+    
+    end = datetime.now()
+    elapsed = end - start
+
+    if verbose:
+        log_output("Get Timegraph Tree", response)
+
+    print(f"Get TimeGraph Tree: {elapsed.total_seconds()}s")
+    log_benchmark(tsp_client.base_url, "Get XY Tree", elapsed.total_seconds(), response.size)
+
 
 @benchmark.command(name="get-xy")
 @argument('UUID', type=str)
 @argument('OUTPUT_ID', type=str)
+@argument('START', type=int)
+@argument('END', type=int)
+@option('--nb-times', type=int)
 @option('--body', type=Path(exists=True), help='JSON file that contain the body params for the request')
+@option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_xy(tsp_client: TspClient, body: str):
-    pass
+def get_xy(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, nb_times: int,  body: str, verbose: bool):
+    start = datetime.now()
+    response = tsp_client.fetch_xy(uuid, output_id, None)
+
+    while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
+        sleep(POLLING_TIME) # 200ms
+        response = tsp_client.fetch_xy(uuid, output_id)    
+    
+    end = datetime.now()
+    elapsed = end - start
+
+    if verbose:
+        log_output("Get Timegraph Tree", response)
+
+    print(f"Get TimeGraph Tree: {elapsed.total_seconds()}s")
+    log_benchmark(tsp_client.base_url, "Get XY Tree", elapsed.total_seconds(), response.size)
+
 
 
 def log_benchmark(target, endpoint, elapsed_time, response_size = None):

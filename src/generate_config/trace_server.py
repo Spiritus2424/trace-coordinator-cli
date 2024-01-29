@@ -8,14 +8,22 @@ class TraceServer:
         self.filter = filter
     
 
+   
     @classmethod
     def to_yaml(cls, representer: Representer, node):
-        return representer.represent_dict({
-            "host": node.host,
-            "port": node.port,
-            "traces-path": node.traces_path,
-            "filter": node.filter
-        })
+        if node.filter == None: 
+            return representer.represent_dict({
+                "host": node.host,
+                "port": node.port,
+                "traces-path": node.traces_path            
+                })
+        else: 
+            return representer.represent_dict({
+                "host": node.host,
+                "port": node.port,
+                "traces-path": node.traces_path,
+                "filter": node.filter            
+                })
    
 
     

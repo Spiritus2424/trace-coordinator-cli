@@ -330,6 +330,7 @@ class TspClient:
                                      response.status_code, response.reason, response_size)
         else:  # pragma: no cover
             print(GET_TREE_FAILED.format(response.status_code))
+            print(response.reason)
             return TspClientResponse(None, response.status_code, response.reason)
 
 
@@ -359,6 +360,7 @@ class TspClient:
                                      response.status_code, response.reason, response_size)
         else:  # pragma: no cover
             print(GET_STATES_FAILED.format(response.status_code))
+            print(response.text)
             return TspClientResponse(None, response.status_code, response.reason)
 
 
@@ -388,6 +390,7 @@ class TspClient:
                                      response.status_code, response.reason, response_size)
         else:  # pragma: no cover
             print(GET_ARROWS_FAILED.format(response.status_code))
+            print(response.text)
             return TspClientResponse(None, response.status_code, response.reason)
 
     def fetch_xy_tree(self, exp_uuid, output_id, parameters=None):

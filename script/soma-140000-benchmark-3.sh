@@ -1,33 +1,33 @@
 #!/bin/sh
-IP="l4714-01.info.polymtl.ca"
-PORT=5000
+IP="172.17.0.3"
+PORT=8080
 # Open Traces
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    open-trace -v --max-depth=1 /traces
+    open-trace -v --max-depth=1 /home/traces
 
 # Create Experiment
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     create-experiment -v "Experiment Name" \
-        --uuids "65c6e2e6-9910-3005-89df-1a25943e010c" \
-        --uuids "2f9603ec-67af-3277-a9ab-308060795960" \
-        --uuids "26407711-f072-38e4-ad99-b6116d23ad99" \
-        --uuids "e6ff175d-ff54-3945-bb02-1159e4a0e5aa" \
-        --uuids "eb356fe2-cb50-3ce5-9b0a-f53829de6672" \
-        --uuids "cc8216bd-3f73-3e77-8ef4-d0595891150a" \
-        --uuids "29980495-6d16-37f9-a9df-3a9f8acf8cae" \
-        --uuids "031d7f5f-35be-3164-9963-6b1b5f2b182e" \
-        --uuids "f419a3b4-411a-3e33-b7ae-fabd2e368aa8" \
-        --uuids "e2442361-1282-3b7b-b6ff-e77992492100" \
-        --uuids "be0367bc-65cd-34a3-9f6a-77d2218bca89" \
-        --uuids "4e82d256-fe9e-3648-8cab-aea381f00028" \
-        --uuids "3b912096-e874-3cd6-971b-6a06e472bf65" \
-        --uuids "fb745074-a75b-3ea6-aa7c-c95994dfcbb5" \
-        --uuids "9aadd930-cf2a-3fe5-aaa8-f96aae2a8c95" \
-        --uuids "3dd49b48-a7a4-3d5f-b7e8-7b039bac14b8" \
-        --uuids "fcc77e94-c876-33c4-84db-d133393beae3" \
-        --uuids "d5938817-0a0f-3e24-a360-1eeccf4a7a19" \
-        --uuids "2fa00ea7-a4f4-3f40-bd98-9e30b395c7cf" \
-        --uuids "c5e8c3cf-1f59-3f0b-a7c1-5d15d07e5b78"
+        --uuids "16adae32-7ea4-3ed6-a314-70a21b6768b3" \
+        --uuids "e359a33a-324d-3bc9-83b4-43199c27c382" \
+        --uuids "a49cb627-07fc-3a1f-ac06-34942fdc02ec" \
+        --uuids "3939b89f-51c1-32ee-a5fa-24c58b9afd3e" \
+        --uuids "03a07e2b-ed16-375e-b221-2859eee20de9" \
+        --uuids "6f2b0f1a-c8cf-36f1-83f0-2f4932c031ba" \
+        --uuids "9f8169a0-2c31-3d0d-ac6d-eba3db005bca" \
+        --uuids "ea117431-3693-3558-b0c4-d01dc6ef9579" \
+        --uuids "d218899d-a461-399e-b4ce-537ec42a4fd9" \
+        --uuids "1c9c9793-8c88-3825-b009-99cfba339cdf" \
+        --uuids "82f3b394-afbe-3651-9f1f-389d8068c894" \
+        --uuids "78af0fe0-08d9-3c9a-b334-25cc7b1bba0f" \
+        --uuids "6fa32029-fe4c-3142-8c7e-18261e118b6c" \
+        --uuids "99eda657-fadb-3e14-9f75-675120c77bb4" \
+        --uuids "cefe74cd-76d4-3b7e-8cac-221a68c7161c" \
+        --uuids "5fd35952-cb73-3787-adf1-7a94d6e2e1af" \
+        --uuids "70b48655-372b-3688-a9f8-c935a67368e9" \
+        --uuids "f43d3e89-fd91-3048-85f7-952bf3e1e7cc" \
+        --uuids "26b8af97-5819-3d16-a9da-42ab767b4ca6" \
+        --uuids "fb8fcf4c-5d15-3d06-9a6e-3ba44508cca4"
 
 
 # Get Output Descriptors
@@ -42,14 +42,14 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
 
 # Get TimeGraph States: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-timegraph-states -v --nb-times 65000 "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+    get-timegraph-states -v --nb-times 15000 "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"\
         1701205212748171586\
         1701205476581683428
 
 # Get TimeGraph Arrows: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-timegraph-arrows -v --nb-times 65000 "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+    get-timegraph-arrows -v --nb-times 15000 "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider" \
         1701205212748171586\
         1701205476581683428
