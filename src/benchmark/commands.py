@@ -11,7 +11,7 @@ import csv
 
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
-POLLING_TIME = 1
+POLLING_TIME = 0.5
 
 
 
@@ -95,7 +95,7 @@ def open_experiment(tsp_client: TspClient, experiment_name: str, uuids: list, bo
     start = datetime.now()
     response = tsp_client.open_experiment(experiment_name, uuids)
     while response.is_ok() and response.model.indexing_status != IndexingStatus.COMPLETED:
-        sleep(POLLING_TIME) # 200ms
+        sleep(POLLING_TIME)
         response = tsp_client.fetch_experiment(response.model.UUID)
     end = datetime.now()
     elapsed = end - start
@@ -115,12 +115,12 @@ def get_experiment(tsp_client: TspClient, uuid: str, verbose: bool):
     if uuid == None:
         response = tsp_client.fetch_experiments()
         while response.is_ok() and response.model.indexing_status != IndexingStatus.COMPLETED:
-            sleep(POLLING_TIME) # 200ms
+            sleep(POLLING_TIME)
             response = tsp_client.fetch_experiments()
     else:
         response = tsp_client.fetch_experiment(uuid)
         while response.is_ok() and response.model.indexing_status != IndexingStatus.COMPLETED.value:
-            sleep(POLLING_TIME) # 200ms
+            sleep(POLLING_TIME) 
             response = tsp_client.fetch_experiments(response.model.UUID)
     end = datetime.now()
     elapsed = end - start
@@ -168,7 +168,7 @@ def get_timegraph_tree(tsp_client: TspClient, uuid: str, output_id: str, body: s
     response = tsp_client.fetch_timegraph_tree(uuid, output_id, None)
 
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
-        sleep(POLLING_TIME) # 200ms
+        sleep(POLLING_TIME) 
         response = tsp_client.fetch_timegraph_tree(uuid, output_id)    
     
     end = datetime.now()
@@ -202,7 +202,7 @@ def get_timegraph_states(tsp_client: TspClient, uuid: str, output_id: str, start
     start = datetime.now()
     response = tsp_client.fetch_timegraph_states(uuid, output_id, parameters)
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
-        sleep(POLLING_TIME) # 200ms
+        sleep(POLLING_TIME) 
         response = tsp_client.fetch_timegraph_states(uuid, output_id, parameters)
     
     end = datetime.now()
@@ -236,7 +236,7 @@ def get_timegraph_arrows(tsp_client: TspClient, uuid: str, output_id: str, start
     start = datetime.now()
     response = tsp_client.fetch_timegraph_arrows(uuid, output_id, parameters)
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
-        sleep(POLLING_TIME) # 200ms
+        sleep(POLLING_TIME) 
         response = tsp_client.fetch_timegraph_arrows(uuid, output_id, parameters)
     
     end = datetime.now()
@@ -259,16 +259,16 @@ def get_xy_tree(tsp_client: TspClient, uuid: str, output_id: str, body: str, ver
     response = tsp_client.fetch_xy_tree(uuid, output_id, None)
 
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
-        sleep(POLLING_TIME) # 200ms
+        sleep(POLLING_TIME)
         response = tsp_client.fetch_xy_tree(uuid, output_id)    
     
     end = datetime.now()
     elapsed = end - start
 
     if verbose:
-        log_output("Get Timegraph Tree", response)
+        log_output("Get XY Tree", response)
 
-    print(f"Get TimeGraph Tree: {elapsed.total_seconds()}s")
+    print(f"Get XY Tree: {elapsed.total_seconds()}s")
     log_benchmark(tsp_client.base_url, "Get XY Tree", elapsed.total_seconds(), response.size)
 
 
@@ -286,16 +286,16 @@ def get_xy(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: in
     response = tsp_client.fetch_xy(uuid, output_id, None)
 
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
-        sleep(POLLING_TIME) # 200ms
+        sleep(POLLING_TIME) 
         response = tsp_client.fetch_xy(uuid, output_id)    
     
     end = datetime.now()
     elapsed = end - start
 
     if verbose:
-        log_output("Get Timegraph Tree", response)
+        log_output("Get XY", response)
 
-    print(f"Get TimeGraph Tree: {elapsed.total_seconds()}s")
+    print(f"Get XY: {elapsed.total_seconds()}s")
     log_benchmark(tsp_client.base_url, "Get XY Tree", elapsed.total_seconds(), response.size)
 
 
