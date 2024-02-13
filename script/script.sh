@@ -1,46 +1,35 @@
 #!/bin/sh
 # IP="l4714-05.info.polymtl.ca"
 # PORT=5000
-IP="172.17.0.3"
+IP="132.207.72.41"
 PORT=8080
 # Open Traces
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    open-trace -v --max-depth=1 /home/traces
+    open-trace -v --max-depth=1 /home/ahmad/ws/trace-coordinator/traces/hpc-soma-140000
 
 # Create Experiment
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     create-experiment -v "Experiment Name" \
-        --uuids "a28424cc-9fe0-32e0-b08b-0b187690c752" \
-        --uuids "78b17b4e-c1fb-3b0f-83f8-45d979b6d29c" \
-        --uuids "013e1ba1-cf97-37d8-9e64-0e50a0efb16b" \
-        --uuids "1a273b53-3b48-33bc-8390-dea35fa19f71" 
-        
-#         --uuids "2555ab54-1c49-3b3d-a891-02fea0eed441" 
-        # --uuids "a125f3f2-288f-345b-8921-5c0716e27f30" \
-        # --uuids "d85badd5-67c2-36df-aedc-aff9456a4992" \
-        # --uuids "ed94a71b-172e-3979-97d3-3a26fc7d86a4" \
-        # --uuids "79f0e3aa-9030-3166-b2fa-f1f23bae2d1c" \
-        # --uuids "1c374a28-1f39-368a-8fa2-340a6b3dc4c2" \
-        # --uuids "efd48902-808e-310e-beb0-383d9aaf80ef" \
-        # --uuids "5f5badd4-cbbc-3f9a-8b41-a291b0033a44" \
-        # --uuids "58211610-d2eb-3686-a331-cfb6d43ecbe5" \
-        # --uuids "62ee2393-4568-3232-b53a-1c039aed7efa" \
-        # --uuids "da13cfda-ce48-3c51-a7a3-3c5ed8ba29e9" \
-        # --uuids "c02a8e66-d1c6-359b-ae30-ca9ffa598825" \
-        # --uuids "795d29af-0c7c-3fda-9d50-e2ed709ea324" \
-        # --uuids "34f49521-ed74-3cd3-82a9-43c0e468dbc7" \
-        # --uuids "9a5ff73d-1ef7-3509-bfe9-f4cfc0abd4d1" \
-        # --uuids "98a0470a-3d64-381f-82d0-c99f12e1e70f" \
-        # --uuids "4559b756-5fc4-3d5b-a444-9fc690fc7878" \
-        # --uuids "9268504c-72b5-3a80-a1a8-231a1737b28e" \
-        # --uuids "a58051e6-a6e5-35ab-ad9c-ad7d3bb7d610" \
-        # --uuids "c120baf7-b0e7-34b9-8493-7dbb162a6675" 
-
-# 79f0e3aa-9030-3166-b2fa-f1f23bae2d1c
-# 62ee2393-4568-3232-b53a-1c039aed7efa
-# 9a5ff73d-1ef7-3509-bfe9-f4cfc0abd4d1
-# 9268504c-72b5-3a80-a1a8-231a1737b28e
-
+        --uuids "af06dc20-9ded-3d7c-9f20-ce39066585ec" \
+        --uuids "6f5ddfd6-0370-36dc-b24c-2f7b78fd1243" \
+        --uuids "e46799a4-0397-3d9b-a4ff-802bb86361b0" \
+        --uuids "21d3fa41-9548-3d74-9c97-43f09a5cc5a5" \
+        --uuids "fed167d7-19c1-3b17-99fa-fb64167bea1c" \
+        --uuids "8f9aed01-9eb7-36a8-b1a8-3f1599e65b62" \
+        --uuids "f009e21c-8dbe-3d2b-9406-06fd456802a8" \
+        --uuids "ee567596-79d8-3024-b3b2-494eafff83e0" \
+        --uuids "45225089-58b5-3640-98bd-5d9f8bca6bf1" \
+        --uuids "fdecdfce-091f-336d-8533-f83d7261d654" \
+        --uuids "8ee2dc63-bad2-3dda-9623-95b3ac663530" \
+        --uuids "557baf4d-632c-3c30-9405-f01e4410ba2a" \
+        --uuids "51b35327-2962-32de-9fe0-13e1b2b45731" \
+        --uuids "86c2f591-bc39-326f-bed9-be2039d48f1e" \
+        --uuids "432535e6-9c16-391b-92ab-f0dcb4d1f35b" \
+        --uuids "48fe0c6f-9cc0-386f-b6dd-0edb431dba11" \
+        --uuids "336f6dbd-7202-3f90-8f3d-6a9fb4e84e06" \
+        --uuids "1f09d4b3-4798-307b-af06-fd77a60f9f7a" \
+        --uuids "b2725ab3-fab1-317b-a2a7-80617d1d7651" \
+        --uuids "f6215043-8e28-36f0-a139-46a649724736"
 
 
 

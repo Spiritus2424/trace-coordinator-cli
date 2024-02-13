@@ -121,8 +121,9 @@ class XYSeries:
         # Array of tags for each XY value, used when a value passes a filter
         self.tags = []
         if TAGS_KEY in params:
-            for tag in params.get(TAGS_KEY):
-                self.tags.append(tag)
+            if params.get(TAGS_KEY) != None:
+                for tag in params.get(TAGS_KEY):
+                    self.tags.append(tag)
             del params[TAGS_KEY]
 
     def print(self):  # pragma: no cover
@@ -152,19 +153,19 @@ class XYAxis:
         '''
         Label of the axis
         '''
-        if LABEL_KEY in params:
-            self.label = params.get(LABEL_KEY)
-            del params[LABEL_KEY]
+        # if LABEL_KEY in params:
+        #     self.label = params.get(LABEL_KEY)
+        #     del params[LABEL_KEY]
 
         # The units used for the axis, to be appended to the numbers
-        if UNIT_KEY in params:
-            self.unit = params.get(UNIT_KEY)
-            del params[UNIT_KEY]
+        # if UNIT_KEY in params:
+        #     self.unit = params.get(UNIT_KEY)
+        #     del params[UNIT_KEY]
 
         # Type of data for this axis, to give hint on number formatting
-        if DATA_TYPE_KEY in params:
-            self.data_type = params.get(DATA_TYPE_KEY)
-            del params[DATA_TYPE_KEY]
+        # if DATA_TYPE_KEY in params:
+        #     self.data_type = params.get(DATA_TYPE_KEY)
+        #     del params[DATA_TYPE_KEY]
 
     def print(self):  # pragma: no cover
         '''
@@ -203,8 +204,8 @@ class XYAxisEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, XYAxis):
             return {
-                'label': obj.label,
-                'unit': obj.unit,
-                'data_type': obj.data_type
+                # 'label': obj.label,
+                # 'unit': obj.unit,
+                # 'data_type': obj.data_type
             }
         return super().default(obj)

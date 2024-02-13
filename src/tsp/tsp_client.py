@@ -407,7 +407,9 @@ class TspClient:
 
         params = parameters
         if parameters is None:
-            params = {}
+            params = {
+                "parameters": { }
+            }
 
         response = requests.post(api_url, json=params, headers=headers)
 
@@ -432,7 +434,7 @@ class TspClient:
             self.base_url, exp_uuid, output_id)
 
         response = requests.post(api_url, json=parameters, headers=headers)
-
+        
         if response.status_code == 200:
             return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
                                                      ModelType.XY),
