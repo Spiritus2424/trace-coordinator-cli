@@ -199,3 +199,11 @@ http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,351.562885,17
 http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3716.395532,
 // http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY,985.090466,
 
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,2.96698,3761
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,5755.539631,
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.106493,
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,2156.671391,93819072
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,1006.983497,390767040
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,329.549301,1762887
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3576.273796,
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY,943.974925,
