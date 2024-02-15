@@ -185,18 +185,20 @@ def get_timegraph_tree(tsp_client: TspClient, uuid: str, output_id: str, body: s
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)
 @argument('END', type=int)
+@option('--items', "--i" , multiple=True, default=[])
 @option('--nb-times', type=int)
 @option('--body', type=Path(exists=True), help='JSON file that contain the body params for the request')
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_timegraph_states(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, nb_times: int,  body: str, verbose: bool):
+def get_timegraph_states(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, items: list, nb_times: int,  body: str, verbose: bool):
     parameters = {
         "parameters": {
             "requested_timerange": {
                 "start": start,
                 "end": end,
                 "nbTimes": nb_times
-            }
+            },
+            "requested_items": items
         }
     }
     start = datetime.now()
@@ -219,18 +221,20 @@ def get_timegraph_states(tsp_client: TspClient, uuid: str, output_id: str, start
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)
 @argument('END', type=int)
+@option('--items', "--i" , multiple=True, default=[])
 @option('--nb-times', type=int)
 @option('--body', type=Path(exists=True), help='JSON file that contain the body params for the request')
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_timegraph_arrows(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, nb_times: int, body: str, verbose: bool):
+def get_timegraph_arrows(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, items: list, nb_times: int, body: str, verbose: bool):
     parameters = {
         "parameters": {
             "requested_timerange": {
                 "start": start,
                 "end": end,
                 "nbTimes": nb_times
-            }
+            },
+            "requested_items": items
         }
     }
     start = datetime.now()
@@ -277,18 +281,20 @@ def get_xy_tree(tsp_client: TspClient, uuid: str, output_id: str, body: str, ver
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)
 @argument('END', type=int)
+@option('--items', "--i" , multiple=True, default=[])
 @option('--nb-times', type=int)
 @option('--body', type=Path(exists=True), help='JSON file that contain the body params for the request')
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_xy(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, nb_times: int,  body: str, verbose: bool):
+def get_xy(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, items: list, nb_times: int,  body: str, verbose: bool):
     parameters = {
         "parameters": {
             "requested_timerange": {
                 "start": start,
                 "end": end,
                 "nbTimes": nb_times
-            }
+            },
+            "requested_items": items
         }
     }
     start = datetime.now()

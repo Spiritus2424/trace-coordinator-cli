@@ -73,16 +73,16 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
 #         \
         
 
-# Get XY Tree - CPU Usage (org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
+# Get XY Tree - CPU Usage (org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     get-xy-tree -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider"
+        "org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider"
 
 # Case Extreme
-# Get XY: CPU Usage (org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
+# Get XY: CPU Usage (org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     get-xy -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider" \
+        "org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider" \
         1702056042965447210 \
         1702058405022656104
 
