@@ -3,6 +3,7 @@ from tsp.tsp_client import TspClient
 from datetime import datetime
 from pprint import pprint
 from commands import benchmark, log_benchmark
+from animation.waiting import start_waiting_animation, stop_waiting_animation
 import json
 
 @benchmark.command(name="open-trace")
@@ -15,10 +16,15 @@ import json
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
 def open_trace(tsp_client: TspClient, trace_path: str, trace_name: str, max_depth: int, regex_filter: str, body: str, debug: bool, verbose: bool):
+    print(f"Open Trace: ", end="")
+    animation_event = start_waiting_animation()
     start = datetime.now()
     response = tsp_client.open_traces(trace_path, trace_name, max_depth, regex_filter)
     end = datetime.now()
     elapsed = end - start
+    stop_waiting_animation(animation_event)
+    print(f"{elapsed.total_seconds()}s")
+    log_benchmark(tsp_client.base_url, "Open Trace", elapsed.total_seconds(), response.size)
 
     if debug:
         print("Response:")
@@ -29,8 +35,6 @@ def open_trace(tsp_client: TspClient, trace_path: str, trace_name: str, max_dept
         for trace in response.model:
             print(trace.UUID)
 
-    print(f"Open Trace: {elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Open Trace", elapsed.total_seconds(), response.size)
 
 
 
@@ -38,6 +42,8 @@ def open_trace(tsp_client: TspClient, trace_path: str, trace_name: str, max_dept
 @option('--uuid', type=str, help='UUID of opened trace')
 @pass_obj
 def get_trace(tsp_client: TspClient, uuid: str):
+    print(f"Get Traces: ", end="")
+    animation_event = start_waiting_animation()
     start = datetime.now()
     if uuid == None:
         tsp_client.fetch_traces()
@@ -46,17 +52,21 @@ def get_trace(tsp_client: TspClient, uuid: str):
         tsp_client.fetch_trace(uuid)
     end = datetime.now()
     elapsed = end - start
-    print(f"Get Traces: {elapsed.total_seconds()}s")
+    stop_waiting_animation(animation_event)
+    print(f"{elapsed.total_seconds()}s")
     log_benchmark(tsp_client.base_url, "Get Traces", elapsed.total_seconds())
 
 @benchmark.command(name="delete-trace")
 @option('--uuid', type=str)
 @pass_obj
 def delete_trace(tsp_client: TspClient, uuid: str):
+    print(f"Delete Trace: ", end="")
+    animation_event = start_waiting_animation()
     start = datetime.now()
     tsp_client.delete_trace(uuid)
     end = datetime.now()
     elapsed = end - start
-    print(f"Delete Trace: {elapsed.total_seconds()}s")
+    stop_waiting_animation(animation_event)
+    print(f"{elapsed.total_seconds()}s")
     log_benchmark(tsp_client.base_url, "Delete Trace", elapsed.total_seconds())
 
