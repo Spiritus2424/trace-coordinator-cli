@@ -29,4 +29,8 @@ def log_benchmark(target, endpoint, elapsed_time, response_size = None):
 def log_output(endpoint, data):
     with open(f'{endpoint}.json', '+w', encoding='utf-8') as log_file:
         json.dump(data, log_file, indent=4, cls= TspClientResponseEncoder)
-        
+
+
+if __name__ == '__main__':
+    benchmark()
+    # benchmark.add_command(open_trace)

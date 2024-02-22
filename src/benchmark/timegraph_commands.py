@@ -1,9 +1,9 @@
 from click import argument, option, Path, pass_obj
-from tsp.tsp_client import TspClient
-from tsp.response import ResponseStatus
 from time import sleep
 from datetime import datetime
-from commands import benchmark, POLLING_TIME, log_benchmark, log_output
+from tsp.tsp_client import TspClient
+from tsp.response import ResponseStatus
+from benchmark.commands import benchmark, POLLING_TIME, log_benchmark, log_output
 from animation.waiting import start_waiting_animation, stop_waiting_animation
 
 @benchmark.command(name="get-timegraph-tree")
@@ -101,7 +101,7 @@ def get_timegraph_arrows_command(tsp_client: TspClient, uuid: str, output_id: st
 
 ######################################## CONCRETE CASE ################################
 
-@benchmark.command(name="get-timegraph-states")
+@benchmark.command(name="concrete-get-timegraph-states")
 @argument('UUID', type=str)
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)
@@ -140,7 +140,7 @@ def get_timegraph_states_concrete_command(tsp_client: TspClient, uuid: str, outp
         log_output("Get Timegraph States", response)
 
 
-@benchmark.command(name="get-timegraph-arrows")
+@benchmark.command(name="concrete-get-timegraph-arrows")
 @argument('UUID', type=str)
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)

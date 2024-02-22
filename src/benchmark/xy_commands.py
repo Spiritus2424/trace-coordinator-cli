@@ -1,9 +1,9 @@
 from click import argument, option, Path, pass_obj
-from tsp.tsp_client import TspClient
-from tsp.response import ResponseStatus
 from time import sleep
 from datetime import datetime
-from commands import benchmark, log_output, log_benchmark, POLLING_TIME
+from tsp.tsp_client import TspClient
+from tsp.response import ResponseStatus
+from benchmark.commands import benchmark, log_output, log_benchmark, POLLING_TIME
 from animation.waiting import start_waiting_animation, stop_waiting_animation
 
 
@@ -67,7 +67,7 @@ def get_xy_benchmark(tsp_client: TspClient, uuid: str, output_id: str, start: in
 
 ######################################## CONCRETE CASE ################################
 
-@benchmark.command(name="get-xy")
+@benchmark.command(name="concrete-get-xy")
 @argument('UUID', type=str)
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)

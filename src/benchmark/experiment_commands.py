@@ -1,9 +1,9 @@
 from click import argument, option, Path, pass_obj
-from tsp.tsp_client import TspClient
-from tsp.indexing_status import IndexingStatus
 from time import sleep
 from datetime import datetime
-from commands import benchmark, log_benchmark, log_output, POLLING_TIME
+from tsp.tsp_client import TspClient
+from tsp.indexing_status import IndexingStatus
+from benchmark.commands import benchmark, log_benchmark, log_output, POLLING_TIME
 from animation.waiting import start_waiting_animation, stop_waiting_animation
 
 @benchmark.command(name="create-experiment")
@@ -87,4 +87,3 @@ def get_outputs_descriptors(tsp_client: TspClient, uuid: str, output_id: str, ve
         log_output("Get Outputs Descriptors", response)
         # print("Descriptors: ", len(response.model.descriptors))
         # pprint(json.dumps(response.__dict__,  default=vars))
-        
