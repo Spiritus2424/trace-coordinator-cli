@@ -286,3 +286,6 @@ http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,183.747936,487207894
 http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,84.524249,2085173
 http://172.17.0.3:8080/tsp/api/,Get XY Tree,171.016297,
 http://172.17.0.3:8080/tsp/api/,Get XY,23.102171,
+-----------------------------------------------------------------------
+http://172.17.0.3:8080/tsp/api/,Open Trace,1.654205,4181
+http://172.17.0.3:8080/tsp/api/,Create Experiment,34.745112,

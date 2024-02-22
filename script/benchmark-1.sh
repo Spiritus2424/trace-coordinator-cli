@@ -20,7 +20,7 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
         --uuids "54464a07-b470-3a25-8138-a94e07591042" \
         --uuids "ba492294-2252-345f-8951-5be40e2aca57" \
         --uuids "e9fe111e-94bc-3ac5-96ea-7f86013d9361" \
-        --uuids "8da0dc76-8876-3a3e-80ef-5ed773b521bb" \
+        --uuids "4abe6a4c-21a4-328b-a147-9fe8cc422b25" \
         --uuids "2bdcb6f1-dd4c-3f16-bdd3-85bc00af6125" \
         --uuids "7ac0ab48-8100-375e-b928-4f1a8f11dc98" \
         --uuids "d3c64390-588d-3f55-8a4b-1852a7fbe4e7" \
@@ -29,9 +29,9 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
         --uuids "f87d844f-b6c1-3032-9b93-19f62aef8989" \
         --uuids "67fb04ee-8459-35c1-a116-87c974e0f6cd"
 
-# Get Output Descriptors
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-outputs -v cde21a0a-35cd-37d4-8fdc-d1ecad068f6b
+# # Get Output Descriptors
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-outputs -v cde21a0a-35cd-37d4-8fdc-d1ecad068f6b
 
 
 ############################################## TimeGraph Case Extreme ##############################################
@@ -58,29 +58,26 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
 
 ############################################## TimeGraph Case Realist ##############################################
 
-# Get TimeGraph States: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-timegraph-states -v --nb-times 2000 \
-        -i 1 -i 2 -i 3 -i 4 -i 5 -i 6 -i 7 -i 8 -i 9 -i 10 \
-        -i 11 -i 12 -i 13 -i 14 -i 15 -i 16 -i 17 -i 18 -i 19 -i 20 \
-        -i 21 -i 22 -i 23 -i 24 -i 25 -i 26 -i 27 -i 28 -i 29 -i 30 \
-        "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"\
-        1701205212748171586\
-        1701205476581683428\
+# # Get TimeGraph States: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-timegraph-states -v --nb-times 4096 \
+#         -i 1 -i 2 -i 3 -i 4 -i 5 -i 6 -i 7 -i 8 -i 9 -i 10 \
+#         -i 11 -i 12 -i 13 -i 14 -i 15 -i 16 -i 17 -i 18 -i 19 -i 20 \
+#         -i 21 -i 22 -i 23 -i 24 -i 25 -i 26 -i 27 -i 28 -i 29 -i 30 \
+#         "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+#         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"\
+#         1701205212748171586\
+#         1701205476581683428\
         
 
 
-# Get TimeGraph Arrows: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-timegraph-arrows -v --nb-times 2000 \
-        -i 1 -i 2 -i 3 -i 4 -i 5 -i 6 -i 7 -i 8 -i 9 -i 10 \
-        -i 11 -i 12 -i 13 -i 14 -i 15 -i 16 -i 17 -i 18 -i 19 -i 20 \
-        -i 21 -i 22 -i 23 -i 24 -i 25 -i 26 -i 27 -i 28 -i 29 -i 30 \
-        "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider" \
-        1701205212748171586\
-        1701205476581683428\
+# # Get TimeGraph Arrows: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-timegraph-arrows -v --nb-times 4096 \
+#         "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+#         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider" \
+#         1701205212748171586\
+#         1701205476581683428\
 
 ############################################## XY Case Extreme ##############################################
 
@@ -97,21 +94,23 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
 #         1701205212748171586\
 #         1701205476581683428
 
-############################################## XY Case Realist ##############################################
+# ############################################## XY Case Realist ##############################################
 
-# Get XY Tree - CPU Usage (org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-xy-tree -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider"
+# # Get XY Tree - CPU Usage (org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-xy-tree -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+#         "org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider"
 
-# Get XY: CPU Usage (org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-xy -v --nb-times 2000 \
-        -i 1 -i 2 -i 3 -i 4 -i 5 -i 6 -i 7 -i 8 -i 9 -i 10 \
-        -i 11 -i 12 -i 13 -i 14 -i 15 -i 16 -i 17 -i 18 -i 19 -i 20 \
-        -i 21 -i 22 -i 23 -i 24 -i 25 -i 26 -i 27 -i 28 -i 29 -i 30 \
-        "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider" \
-        1701205212748171586\
-        1701205476581683428
+# # Get XY: CPU Usage (org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-xy -v --nb-times 4096 \
+#         -i 92 -i 97 -i 93 -i 95 -i 96 -i 94 -i 98 -i 321 -i 322 -i 325 \
+#         -i 11 -i 12 -i 13 -i 14 -i 15 -i 16 -i 17 -i 18 -i 19 -i 20 \
+#         -i 21 -i 22 -i 23 -i 24 -i 25 -i 26 -i 27 -i 28 -i 29 -i 30 \
+#         "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+#         "org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider" \
+#         1701205212748171586\
+#         1701205476581683428
         
+
+# [92,97,93,95,96,94,98,321,322,325,456,466,467,99,100,101,183,102,104,108,109,105,106,113,118,122,125,126,185,215,216,127,131,132,133,136,142,146,150,110]
