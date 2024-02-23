@@ -129,12 +129,6 @@ class GenericResponseEncoder(json.JSONEncoder):
                 model = [TimeGraphArrowEncoder().default(arrow) for arrow in obj.model]
             elif obj.model_type == ModelType.XY:
                 model = XYModelEncoder().default(obj.model)
-
-            return {
-                # 'model_type': obj.model_type,
-                'model': model,
-                'output': obj.output,
-                'status': obj.status.value if obj.status else None,
-                'status_message': obj.status_message
-            }
+            return model
+        
         return super().default(obj)

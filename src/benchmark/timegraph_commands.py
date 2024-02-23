@@ -106,11 +106,13 @@ def get_timegraph_arrows_command(tsp_client: TspClient, uuid: str, output_id: st
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)
 @argument('END', type=int)
-@option('--nb-items', "-i", default=60)
+@option('--process', default="")
+@option('--nb-items', "-i", type=int, default=60)
 @option('--nb-times', type=int)
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_timegraph_states_concrete_command(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, items: list, nb_times: int,  body: str, verbose: bool):
+def get_timegraph_states_concrete_command(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, process: str, nb_items: int, nb_times: int, verbose: bool):
+    response_tree = get_timegraph_tree(tsp_client, uuid, output_id)
     parameters = {
         "parameters": {
             "requested_timerange": {
@@ -118,13 +120,9 @@ def get_timegraph_states_concrete_command(tsp_client: TspClient, uuid: str, outp
                 "end": end,
                 "nbTimes": nb_times
             },
-            "requested_items": items
+            "requested_items": sample_timegraph_tree(response_tree.model.model.entries, nb_items, process)
         }
     }
-    # Get Tree
-    response = get_timegraph_tree(tsp_client, uuid, output_id)
-
-    
 
     print(f"Get TimeGraph States: ", end="")
     animation_event = start_waiting_animation()
@@ -203,3 +201,13 @@ def get_timegraph_arrows(tsp_client: TspClient, uuid: str, output_id: str, param
         response = tsp_client.fetch_timegraph_arrows(uuid, output_id, parameters)
 
     return response
+
+def sample_timegraph_tree(entries: list, nb_items: int, process: str):
+    id_items = []
+    for entry in entries:
+        if entry.labels[0] == process:
+            id_items.append(entry.id)
+        if nb_items != 0 and len(id_items) > nb_items:
+            break
+
+    return id_items

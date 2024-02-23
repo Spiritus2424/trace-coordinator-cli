@@ -72,12 +72,13 @@ def get_xy_benchmark(tsp_client: TspClient, uuid: str, output_id: str, start: in
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)
 @argument('END', type=int)
-@option('--nb-items', "-i", default=60)
+@option('--process', default="")
+@option('--nb-items', "-i", type=int, default=60)
 @option('--nb-times', type=int)
-@option('--body', type=Path(exists=True), help='JSON file that contain the body params for the request')
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_xy_concrete_benchmark(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, items: list, nb_times: int,  body: str, verbose: bool):
+def get_xy_concrete_benchmark(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, process: str, nb_items: int, nb_times: int, verbose: bool):
+    response_tree = get_xy_tree(tsp_client, uuid, output_id)
     parameters = {
         "parameters": {
             "requested_timerange": {
@@ -85,7 +86,7 @@ def get_xy_concrete_benchmark(tsp_client: TspClient, uuid: str, output_id: str, 
                 "end": end,
                 "nbTimes": nb_times
             },
-            "requested_items": items
+            "requested_items": sample_xy_tree(response_tree.model.model.entries, nb_items, process)
         }
     }
 
@@ -105,7 +106,7 @@ def get_xy_concrete_benchmark(tsp_client: TspClient, uuid: str, output_id: str, 
 
 ######################################## FUNCTION ################################
 
-def get_xy_tree(tsp_client: TspClient, uuid: str, output_id: str, body: str, verbose: bool):
+def get_xy_tree(tsp_client: TspClient, uuid: str, output_id: str):
     response = tsp_client.fetch_xy_tree(uuid, output_id, None)
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
         sleep(POLLING_TIME)
@@ -116,7 +117,18 @@ def get_xy_tree(tsp_client: TspClient, uuid: str, output_id: str, body: str, ver
 def get_xy(tsp_client: TspClient, uuid: str, output_id: str, parameters):
     response = tsp_client.fetch_xy(uuid, output_id, parameters)
     while response.is_ok() and response.model.status != ResponseStatus.COMPLETED:
-        sleep(POLLING_TIME) 
+        sleep(POLLING_TIME)
         response = tsp_client.fetch_xy(uuid, output_id, parameters)    
     
     return response
+
+
+def sample_xy_tree(entries: list, nb_items: int, process: str):
+    id_items = []
+    for entry in entries:
+        if entry.labels[0] == process:
+            id_items.append(entry.id)
+        if nb_items != 0 and len(id_items) > nb_items:
+            break
+
+    return id_items

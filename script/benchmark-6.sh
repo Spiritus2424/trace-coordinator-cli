@@ -29,9 +29,10 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
         --uuids "e5d06115-e733-36dc-bbe9-29432eeb77a5" \
         --uuids "ab074097-0ff0-3716-a377-a9bdb26c1008"
 
-# Get Output Descriptors
-trace-coordinator benchmark -d --ip $IP -p $PORT \
-    get-outputs -v cde21a0a-35cd-37d4-8fdc-d1ecad068f6b
+
+# # Get Output Descriptors
+# trace-coordinator benchmark -d --ip $IP -p $PORT \
+#     get-outputs -v cde21a0a-35cd-37d4-8fdc-d1ecad068f6b
 
 
 ############################################## TimeGraph Case Extreme ##############################################
@@ -58,16 +59,19 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
 
 ############################################## TimeGraph Case Realist ##############################################
 
+# Get TimeGraph Tree: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
+trace-coordinator benchmark -d --ip $IP -p $PORT \
+    get-timegraph-tree -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
+        "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"
+
+
 # Get TimeGraph States: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     get-timegraph-states -v --nb-times 4096 \
-        -i 1 -i 2 -i 3 -i 4 -i 5 -i 6 -i 7 -i 8 -i 9 -i 10 \
-        -i 11 -i 12 -i 13 -i 14 -i 15 -i 16 -i 17 -i 18 -i 19 -i 20 \
-        -i 21 -i 22 -i 23 -i 24 -i 25 -i 26 -i 27 -i 28 -i 29 -i 30 \
         "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"\
         1701205212748171586\
-        1701205476581683428\
+        1701205476581683428
         
 
 
@@ -77,7 +81,7 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
         "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider" \
         1701205212748171586\
-        1701205476581683428\
+        1701205476581683428
 
 ############################################## XY Case Extreme ##############################################
 
@@ -94,21 +98,17 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
 #         1701205212748171586\
 #         1701205476581683428
 
-############################################## XY Case Realist ##############################################
+# ############################################## XY Case Realist ##############################################
 
 # Get XY Tree - CPU Usage (org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     get-xy-tree -v "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
         "org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider"
 
-# Get XY: CPU Usage (org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
+# Get XY: CPU Usage (org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     get-xy -v --nb-times 4096 \
-        -i 1 -i 2 -i 3 -i 4 -i 5 -i 6 -i 7 -i 8 -i 9 -i 10 \
-        -i 11 -i 12 -i 13 -i 14 -i 15 -i 16 -i 17 -i 18 -i 19 -i 20 \
-        -i 21 -i 22 -i 23 -i 24 -i 25 -i 26 -i 27 -i 28 -i 29 -i 30 \
         "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
-        "org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider" \
+        "org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider" \
         1701205212748171586\
         1701205476581683428
-        

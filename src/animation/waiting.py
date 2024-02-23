@@ -17,6 +17,8 @@ def waiting_animation(stop_event: Event):
     while not stop_event.is_set():
         n = n % 3 + 1
         dots = n * '.' + (3 - n) * ' '
-        sys.stdout.write('\r Waiting '+ dots)
-        sys.stdout.flush()
-        time.sleep(0.5)
+        sys.stdout.write(f"{dots}")
+        # Move the cursor backward https://blog.finxter.com/how-to-overwrite-the-previous-print-to-stdout-in-python/
+        sys.stdout.write("\033[3D") 
+        sys.stdout.flush() 
+        time.sleep(0.2)

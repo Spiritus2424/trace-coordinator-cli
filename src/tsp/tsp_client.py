@@ -433,7 +433,13 @@ class TspClient:
         api_url = '{0}experiments/{1}/outputs/XY/{2}/xy'.format(
             self.base_url, exp_uuid, output_id)
 
-        response = requests.post(api_url, json=parameters, headers=headers)
+        params = parameters
+        if parameters is None:
+            params = {
+                "parameters": { }
+            }
+
+        response = requests.post(api_url, json=params, headers=headers)
         
         if response.status_code == 200:
             return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),

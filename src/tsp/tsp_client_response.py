@@ -39,7 +39,7 @@ class TspClientResponse:
     Class that for providing the tsp
     '''
 
-    def __init__(self, model, status, status_text, size=None):
+    def __init__(self, model, status, status_message, size=None):
         '''
         Constructor
         '''
@@ -48,15 +48,15 @@ class TspClientResponse:
         self.model = model
 
         # The HTTP status code
-        self.status_code = status
+        self.status = status
 
         # The status message
-        self.status_text = status_text
+        self.status_message = status_message
 
         self.size = size
     
     def is_ok(self):
-        return self.status_code >= 200 and self.status_code < 400
+        return self.status >= 200 and self.status < 400
 
 class TspClientResponseEncoder(json.JSONEncoder):
     
@@ -66,19 +66,19 @@ class TspClientResponseEncoder(json.JSONEncoder):
             if isinstance(obj.model, GenericResponse):
                 return {
                     'model': GenericResponseEncoder().default(obj.model),
-                    'status_code': obj.status_code,
-                    'status_text': obj.status_text
+                    RESPONSE_STATUS_KEY : obj.status,
+                    STATUS_MESSAGE_KEY: obj.status_message
                 }
             elif isinstance(obj.model, OutputDescriptorSet):
                 return {
                     'model': [OutputDescriptorEncoder().default(output_descriptor) for output_descriptor in obj.model.descriptors],
-                    'status_code': obj.status_code,
-                    'status_text': obj.status_text
+                    RESPONSE_STATUS_KEY: obj.status,
+                    STATUS_MESSAGE_KEY: obj.status_message
                 }
             else:
                 return {
                     'model': obj.model,
-                    'status_code': obj.status_code,
-                    'status_text': obj.status_text
+                    RESPONSE_STATUS_KEY: obj.status,
+                    STATUS_MESSAGE_KEY: obj.status_message
                 }
         return super().default(obj)
