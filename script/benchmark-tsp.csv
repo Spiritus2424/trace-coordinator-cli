@@ -325,3 +325,14 @@ http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,4.556032,3761
 http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,0.032765,
 http://l4714-02.info.polymtl.ca:5000/tsp/api/,Real Case - Get TimeGraph Arrows,0.017253,
 http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,1.683153,3761
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,5553.269075,
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,2029.967494,93819072
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Real Case - Get TimeGraph States,0.292226,70
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Real Case - Get TimeGraph Arrows,0.021439,61
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3180.558476,
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Real Case - Get XY,0.155259,
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,2.821111,3761
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,0.197422,
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Real Case - Get TimeGraph States,174.972863,25337666
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Real Case - Get TimeGraph Arrows,290.423745,203
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Real Case - Get XY,1633.868362,
