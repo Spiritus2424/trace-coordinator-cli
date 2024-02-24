@@ -1,6 +1,9 @@
 #!/bin/sh
 IP="l4714-02.info.polymtl.ca"
 PORT=5000
+
+############################################## Resolution 1080p (1920x1080) ##############################################
+
 # Open Traces
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     open-trace -v --max-depth=1 /home/traces

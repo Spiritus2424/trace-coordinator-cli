@@ -132,7 +132,7 @@ def get_timegraph_states_concrete_command(tsp_client: TspClient, uuid: str, outp
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Real Case - Get TimeGraph States", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get TimeGraph States", elapsed.total_seconds(), response.size)
     
     if verbose:
         log_output("Get Timegraph States", response)
@@ -166,7 +166,7 @@ def get_timegraph_arrows_concrete_command(tsp_client: TspClient, uuid: str, outp
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Real Case - Get TimeGraph Arrows", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get TimeGraph Arrows", elapsed.total_seconds(), response.size)
 
     if verbose:
         log_output("Get Timegraph Arrows", response)

@@ -1,6 +1,9 @@
 #!/bin/sh
-IP="172.17.0.3"
+IP="172.17.0.2"
 PORT=8080
+
+############################################## Resolution 1080p (1920x1080) ##############################################
+
 # Open Traces
 trace-coordinator benchmark -d --ip $IP -p $PORT \
     open-trace -v --max-depth=1 /home/traces

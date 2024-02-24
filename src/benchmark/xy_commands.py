@@ -98,7 +98,7 @@ def get_xy_concrete_benchmark(tsp_client: TspClient, uuid: str, output_id: str, 
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Real Case - Get XY", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get XY", elapsed.total_seconds(), response.size)
 
     if verbose:
         log_output("Get XY", response)
