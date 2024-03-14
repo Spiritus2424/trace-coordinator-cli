@@ -38,7 +38,7 @@ RESPONSE_STATUS_KEY = "status"
 STATUS_MESSAGE_KEY = "statusMessage"
 
 
-class ResponseStatus(Enum):
+class ResponseStatus(str, Enum):
     '''
     Model is partial, data provider is still computing. If this status is
     returned, it's viewer responsability to request again the data provider after
@@ -118,7 +118,7 @@ class GenericResponse:
 class GenericResponseEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, GenericResponse):
-            model = obj.model
+            # model = obj.model
             if obj.model_type ==  ModelType.TIME_GRAPH_TREE \
                 or obj.model_type == ModelType.XY_TREE \
                 or obj.model_type == ModelType.DATA_TREE:
@@ -129,6 +129,20 @@ class GenericResponseEncoder(json.JSONEncoder):
                 model = [TimeGraphArrowEncoder().default(arrow) for arrow in obj.model]
             elif obj.model_type == ModelType.XY:
                 model = XYModelEncoder().default(obj.model)
-            return model
-        
-        return super().default(obj)
+            
+            return {
+                'model': model,
+                'status': obj.status,
+                'statusMessage': obj.status_message
+            }
+        else:
+            return super().default(obj)
+
+# class ResponseStatusEncoder(json.JSONEncoder):
+#     def default(self, obj):
+#         if isinstance(obj, ResponseStatus):
+            
+            
+#             return ResponseStatus.
+#         else:
+#             return super().default(obj)

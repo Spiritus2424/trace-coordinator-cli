@@ -1,0 +1,7 @@
+http://172.17.0.2:8080/tsp/api/,Create Experiment,34.698171,
+http://172.17.0.2:8080/tsp/api/,Get Outputs Descriptors,0.07835,
+http://172.17.0.2:8080/tsp/api/,Get TimeGraph Tree,2.642255,2230608
+http://172.17.0.2:8080/tsp/api/,Get TimeGraph States,4.755329,8839880
+http://172.17.0.2:8080/tsp/api/,Get TimeGraph Arrows,6.483821,284770
+http://172.17.0.2:8080/tsp/api/,Get XY Tree,16.555383,
+http://172.17.0.2:8080/tsp/api/,Get XY,7.292469,

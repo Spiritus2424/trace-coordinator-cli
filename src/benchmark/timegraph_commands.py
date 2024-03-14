@@ -1,10 +1,11 @@
 from click import argument, option, Path, pass_obj
 from time import sleep
 from datetime import datetime
-from tsp.tsp_client import TspClient
+from tsp.tsp_client import TspClient, GenericResponse, ModelType
 from tsp.response import ResponseStatus
 from benchmark.commands import benchmark, POLLING_TIME, log_benchmark, log_output
 from animation.waiting import start_waiting_animation, stop_waiting_animation
+import json
 
 @benchmark.command(name="get-timegraph-tree")
 @argument('UUID', type=str)
@@ -106,13 +107,18 @@ def get_timegraph_arrows_command(tsp_client: TspClient, uuid: str, output_id: st
 @argument('OUTPUT_ID', type=str)
 @argument('START', type=int)
 @argument('END', type=int)
+@option('--tree', type=Path(exists=True), help='JSON file that contain the tree that the Get timegraph tree returned')
 @option('--process', default="")
 @option('--nb-items', "-i", type=int, default=60)
 @option('--nb-times', type=int)
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def get_timegraph_states_concrete_command(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, process: str, nb_items: int, nb_times: int, verbose: bool):
-    response_tree = get_timegraph_tree(tsp_client, uuid, output_id)
+def get_timegraph_states_concrete_command(tsp_client: TspClient, uuid: str, output_id: str, start: int, end: int, tree: str, process: str, nb_items: int, nb_times: int, verbose: bool):
+    timegraph_tree = None
+    with open(tree, 'r') as file:
+        timegraph_tree = GenericResponse(json.load(file), ModelType.TIME_GRAPH_TREE)
+        
+
     parameters = {
         "parameters": {
             "requested_timerange": {
@@ -120,7 +126,7 @@ def get_timegraph_states_concrete_command(tsp_client: TspClient, uuid: str, outp
                 "end": end,
                 "nbTimes": nb_times
             },
-            "requested_items": sample_timegraph_tree(response_tree.model.model.entries, nb_items, process)
+            "requested_items": sample_timegraph_tree(timegraph_tree.model.entries, nb_items, process)
         }
     }
 

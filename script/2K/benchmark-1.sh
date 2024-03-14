@@ -45,7 +45,7 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
 
 # Get TimeGraph States: Thread Status Provider (org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    concrete-get-timegraph-states -v --nb-times 2560 --process "soma_base.gnu_m" --nb-items 50 \
+    concrete-get-timegraph-states -v --nb-times 2560 --tree "Get Timegraph Tree.json" --process "soma_base.gnu_m" --nb-items 50 \
         "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
         "org.eclipse.tracecompass.internal.analysis.os.linux.core.threadstatus.ThreadStatusDataProvider"\
         1701205212748171586\
@@ -68,7 +68,7 @@ trace-coordinator benchmark -d --ip $IP -p $PORT \
 
 # Get XY: CPU Usage (org.eclispe.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider)
 trace-coordinator benchmark -d --ip $IP -p $PORT \
-    concrete-get-xy -v --nb-times 2560 --process "soma_base.gnu_m" --nb-items 50 \
+    concrete-get-xy -v --nb-times 2560 --tree "Get XY Tree.json" --process "soma_base.gnu_m" --nb-items 50 \
         "cde21a0a-35cd-37d4-8fdc-d1ecad068f6b" \
         "org.eclipse.tracecompass.analysis.os.linux.core.cpuusage.CpuUsageDataProvider" \
         1701205212748171586\

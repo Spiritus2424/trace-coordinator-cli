@@ -64,21 +64,22 @@ class TspClientResponseEncoder(json.JSONEncoder):
         if isinstance(obj, TspClientResponse):
             # Convert TspClientResponse to a dictionary
             if isinstance(obj.model, GenericResponse):
-                return {
-                    'model': GenericResponseEncoder().default(obj.model),
-                    RESPONSE_STATUS_KEY : obj.status,
-                    STATUS_MESSAGE_KEY: obj.status_message
-                }
+                return GenericResponseEncoder().default(obj.model)
+                # return {
+                #     'model': GenericResponseEncoder().default(obj.model),
+                #     # RESPONSE_STATUS_KEY : obj.status,
+                #     # STATUS_MESSAGE_KEY: obj.status_message
+                # }
             elif isinstance(obj.model, OutputDescriptorSet):
                 return {
                     'model': [OutputDescriptorEncoder().default(output_descriptor) for output_descriptor in obj.model.descriptors],
-                    RESPONSE_STATUS_KEY: obj.status,
-                    STATUS_MESSAGE_KEY: obj.status_message
+                    # RESPONSE_STATUS_KEY: obj.status,
+                    # STATUS_MESSAGE_KEY: obj.status_message
                 }
             else:
                 return {
                     'model': obj.model,
-                    RESPONSE_STATUS_KEY: obj.status,
-                    STATUS_MESSAGE_KEY: obj.status_message
+                    # RESPONSE_STATUS_KEY: obj.status,
+                    # STATUS_MESSAGE_KEY: obj.status_message
                 }
         return super().default(obj)
