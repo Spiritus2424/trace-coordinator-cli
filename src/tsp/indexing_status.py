@@ -1,6 +1,6 @@
 from enum import Enum
 
-class IndexingStatus(Enum):
+class IndexingStatus(str, Enum):
     '''
     Model is partial, data provider is still computing. If this status is
     returned, it's viewer responsability to request again the data provider after

@@ -23,7 +23,7 @@
 """Trace class file."""
 
 from tsp.indexing_status import IndexingStatus
-
+import json
 
 NA = "N/A"
 UUID_KEY = "UUID"
@@ -98,3 +98,19 @@ class Trace:
             del params[INDEXING_STATUS_KEY]
         else:  # pragma: no cover
             self.indexing_status = 0
+
+
+class TraceEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Trace):
+            return {
+                'UUID': obj.UUID,
+                'name': obj.name,
+                'path': obj.path,
+                'start': obj.start,
+                'end': obj.end,
+                'number_of_events': obj.number_of_events,
+                'indexing_status': obj.indexing_status,
+
+            }
+        return super().default(obj)

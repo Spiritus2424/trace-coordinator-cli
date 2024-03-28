@@ -2,7 +2,7 @@ from click import argument, option, Path, pass_obj
 from time import sleep
 from datetime import datetime
 from tsp.tsp_client import TspClient, GenericResponse, ModelType
-from tsp.response import ResponseStatus
+from tsp.response import ResponseStatus, GenericResponseEncoder
 from benchmark.commands import benchmark, POLLING_TIME, log_benchmark, log_output
 from animation.waiting import start_waiting_animation, stop_waiting_animation
 import json
@@ -22,10 +22,10 @@ def get_timegraph_tree_command(tsp_client: TspClient, uuid: str, output_id: str,
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}")
-    log_benchmark(tsp_client.base_url, "Get TimeGraph Tree", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get TimeGraph Tree", elapsed.total_seconds())
 
     if verbose:
-        log_output("Get Timegraph Tree", response)
+        log_output("Get Timegraph Tree", response.model, GenericResponseEncoder)
 
 
 
@@ -58,10 +58,10 @@ def get_timegraph_states_command(tsp_client: TspClient, uuid: str, output_id: st
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get TimeGraph States", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get TimeGraph States", elapsed.total_seconds())
     
     if verbose:
-        log_output("Get Timegraph States", response)
+        log_output("Get Timegraph States", response.model, GenericResponseEncoder)
 
 
  
@@ -93,10 +93,10 @@ def get_timegraph_arrows_command(tsp_client: TspClient, uuid: str, output_id: st
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get TimeGraph Arrows", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get TimeGraph Arrows", elapsed.total_seconds())
 
     if verbose:
-        log_output("Get Timegraph Arrows", response)
+        log_output("Get Timegraph Arrows", response.model, GenericResponseEncoder)
 
 
 
@@ -138,10 +138,10 @@ def get_timegraph_states_concrete_command(tsp_client: TspClient, uuid: str, outp
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get TimeGraph States", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get TimeGraph States", elapsed.total_seconds())
     
     if verbose:
-        log_output("Get Timegraph States", response)
+        log_output("Get Timegraph States", response.model, GenericResponseEncoder)
 
 
 @benchmark.command(name="concrete-get-timegraph-arrows")
@@ -172,10 +172,10 @@ def get_timegraph_arrows_concrete_command(tsp_client: TspClient, uuid: str, outp
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get TimeGraph Arrows", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get TimeGraph Arrows", elapsed.total_seconds())
 
     if verbose:
-        log_output("Get Timegraph Arrows", response)
+        log_output("Get Timegraph Arrows", response.model, GenericResponseEncoder)
 
 
 

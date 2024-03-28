@@ -1,11 +1,9 @@
-import json
 from click import argument, option, Path, pass_obj
 from datetime import datetime
-from pprint import pprint
 from tsp.tsp_client import TspClient
-from benchmark.commands import benchmark, log_benchmark
+from benchmark.commands import benchmark, log_benchmark, log_output
 from animation.waiting import start_waiting_animation, stop_waiting_animation
-
+from tsp.trace_set import TraceSetEncoder
 
 @benchmark.command(name="open-trace")
 @argument('TRACE_PATH')
@@ -25,16 +23,13 @@ def open_trace(tsp_client: TspClient, trace_path: str, trace_name: str, max_dept
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Open Trace", elapsed.total_seconds(), response.size)
-
-    if debug:
-        print("Response:")
-        pprint(json.dumps(response.__dict__, default=vars))
+    log_benchmark(tsp_client.base_url, "Open Trace", elapsed.total_seconds())
 
     if verbose:
-        print("Number of trace: ", len(response.model))
-        for trace in response.model:
+        print(f"Number of trace: {len(response.model.traces)}")
+        for trace in response.model.traces:
             print(trace.UUID)
+        log_output("Open Trace", response.model, TraceSetEncoder)
 
 
 
@@ -70,6 +65,3 @@ def delete_trace(tsp_client: TspClient, uuid: str):
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
     log_benchmark(tsp_client.base_url, "Delete Trace", elapsed.total_seconds())
-
-# benchmark.add_command(open_trace)
-# # print(benchmark.list_commands())

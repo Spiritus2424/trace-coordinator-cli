@@ -26,6 +26,8 @@ import json
 from tsp.response import GenericResponse, GenericResponseEncoder
 from tsp.output_descriptor_set import OutputDescriptorSet
 from tsp.output_descriptor import OutputDescriptorEncoder
+from tsp.trace_set import TraceSet, TraceSetEncoder
+from tsp.trace import Trace, TraceEncoder
 
 MODEL_KEY = "model"
 OUTPUT_DESCRIPTOR_KEY = "output"
@@ -57,29 +59,3 @@ class TspClientResponse:
     
     def is_ok(self):
         return self.status >= 200 and self.status < 400
-
-class TspClientResponseEncoder(json.JSONEncoder):
-    
-    def default(self, obj):
-        if isinstance(obj, TspClientResponse):
-            # Convert TspClientResponse to a dictionary
-            if isinstance(obj.model, GenericResponse):
-                return GenericResponseEncoder().default(obj.model)
-                # return {
-                #     'model': GenericResponseEncoder().default(obj.model),
-                #     # RESPONSE_STATUS_KEY : obj.status,
-                #     # STATUS_MESSAGE_KEY: obj.status_message
-                # }
-            elif isinstance(obj.model, OutputDescriptorSet):
-                return {
-                    'model': [OutputDescriptorEncoder().default(output_descriptor) for output_descriptor in obj.model.descriptors],
-                    # RESPONSE_STATUS_KEY: obj.status,
-                    # STATUS_MESSAGE_KEY: obj.status_message
-                }
-            else:
-                return {
-                    'model': obj.model,
-                    # RESPONSE_STATUS_KEY: obj.status,
-                    # STATUS_MESSAGE_KEY: obj.status_message
-                }
-        return super().default(obj)

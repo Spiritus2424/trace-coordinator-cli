@@ -22,8 +22,8 @@
 
 """TraceSet class file."""
 
-from tsp.trace import Trace
-
+from tsp.trace import Trace, TraceEncoder
+import json
 
 # pylint: disable=too-few-public-methods
 class TraceSet:
@@ -38,3 +38,11 @@ class TraceSet:
         self.traces = []
         for obj in params:
             self.traces.append(Trace(obj))
+
+
+class TraceSetEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, TraceSet):
+            return [TraceEncoder().default(trace) for trace in obj.traces]
+
+        return super().default(obj)

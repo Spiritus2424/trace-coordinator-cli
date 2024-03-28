@@ -1,0 +1,576 @@
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Open Trace,1.646352
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Open Trace,1.657449
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Open Trace,1.654429
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Open Trace,1.751704
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Open Trace,1.643688
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Open Trace,1.713602
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Open Trace,1.644884
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Open Trace,1.78623
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Open Trace,1.862742
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Open Trace,1.790814
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,1.789896
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Open Trace,1.744047
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Open Trace,1.827367
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Open Trace,1.888634
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Open Trace,1.815724
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Open Trace,1.864344
+http://l4714-06.info.polymtl.ca:5000/tsp/api/,Open Trace,1.877017
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Open Trace,1.805772
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Open Trace,1.853956
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Open Trace,2.05301
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Create Experiment,255.107289
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.065147
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Create Experiment,266.678537
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.075707
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,268.258707
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Create Experiment,268.78866
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.072044
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.063288
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Create Experiment,271.310705
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.056478
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Create Experiment,271.920872
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Create Experiment,272.737069
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.073026
+http://l4714-06.info.polymtl.ca:5000/tsp/api/,Create Experiment,272.806363
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Create Experiment,272.959053
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.072378
+http://l4714-06.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.059471
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.072691
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Create Experiment,274.01929
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Create Experiment,273.979084
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Create Experiment,274.237029
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.072247
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.053736
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.058783
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Create Experiment,275.012256
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Create Experiment,274.941607
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Create Experiment,275.097329
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.075053
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.074005
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.063243
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Create Experiment,276.461468
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.083024
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Create Experiment,279.451502
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Create Experiment,279.34644
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Create Experiment,279.423868
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.078726
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.05763
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.081348
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Create Experiment,286.347372
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.064754
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,313.105864
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.634318
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,3.992291
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,328.337892
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.633015
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,320.96492
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,328.234597
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.298041
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,341.841738
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.603996
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,3.727048
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,344.04457
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.477724
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,336.225841
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.4917
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.376588
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,339.841019
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.658242
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.339822
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,6.971099
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,3.903123
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.423477
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,343.798589
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.419286
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,3.928065
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,354.832492
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,8.265118
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.470634
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,357.015964
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.545825
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,6.712911
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,365.231235
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.13641
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.662913
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.529487
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,370.482685
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,373.81002
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,1.839718
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.642026
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,376.254353
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get XY Tree,1.182839
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.48883
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.841614
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,8.731628
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.784991
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,387.999936
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.443943
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,14.140876
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,395.551714
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.585731
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,3.07098
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.583999
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,411.749249
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,5.09902
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,8.707313
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get XY Tree,132.064242
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get XY,10.332704
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get XY Tree,142.181547
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get XY Tree,140.665402
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,140.160287
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get XY Tree,147.076811
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get XY,10.953166
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get XY Tree,147.164469
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get XY,10.323427
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY,10.689418
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get XY,10.77072
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get XY Tree,143.354623
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get XY Tree,151.68886
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get XY,10.884887
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get XY Tree,143.220761
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get XY Tree,145.601816
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get XY Tree,143.780083
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get XY,10.459607
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get XY,10.921412
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get XY,10.058962
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get XY,10.873636
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get XY Tree,142.720401
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get XY,10.875349
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get XY,10.585885
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get XY Tree,147.822985
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get XY Tree,142.213732
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get XY Tree,143.776376
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get XY,10.596319
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get XY,11.22082
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get XY Tree,145.14694
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get XY,10.646461
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get XY,10.369614
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get XY Tree,148.812502
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get XY,10.900504
+------------------------
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Open Trace,1.496446
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Open Trace,1.616016
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Open Trace,1.680736
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Open Trace,1.729385
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Open Trace,1.638037
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Open Trace,1.621666
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Open Trace,1.77908
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Open Trace,1.749922
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Open Trace,1.821408
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Open Trace,1.718514
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Open Trace,1.697152
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Open Trace,1.816094
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,1.828249
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Open Trace,1.803384
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Open Trace,1.739035
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Open Trace,1.772009
+http://l4714-06.info.polymtl.ca:5000/tsp/api/,Open Trace,1.721369
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Open Trace,1.804758
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Open Trace,1.793557
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Open Trace,1.855395
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Create Experiment,250.968668
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.061578
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Create Experiment,265.724026
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.044295
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Create Experiment,266.738951
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.062487
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Create Experiment,268.530238
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.071074
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Create Experiment,269.494735
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Create Experiment,269.4885
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Create Experiment,269.59288
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Create Experiment,269.95214
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.062767
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.06098
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.065689
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.075909
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Create Experiment,271.47875
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,271.959461
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.0594
+http://l4714-06.info.polymtl.ca:5000/tsp/api/,Create Experiment,272.341187
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Create Experiment,272.465451
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.064933
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Create Experiment,272.792719
+http://l4714-06.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.079357
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Create Experiment,273.150334
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.055567
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.038927
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.058764
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Create Experiment,274.132914
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Create Experiment,274.850381
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.054281
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.073495
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Create Experiment,275.979638
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.058271
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Create Experiment,277.401287
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Create Experiment,277.283913
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.040073
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.050448
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Create Experiment,282.321492
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.050129
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,280.039135
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,3.31339
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,5.913038
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,329.930266
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.913403
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.60476
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,344.102853
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,342.231457
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.577404
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.515165
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,354.465718
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.351849
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.345413
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.659983
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,363.530871
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.760491
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.633455
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,371.446773
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,374.953076
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.701089
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.646097
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,373.703741
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.687801
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.686075
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.936258
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,5.40899
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,379.582221
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.196496
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,392.61266
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.592535
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,385.495453
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,383.516789
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.574374
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,1.748679
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.639925
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,3.610871
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,398.394756
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,397.411145
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.345095
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,5.401763
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,399.7795
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.80047
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,3.592541
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,5.755128
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.565226
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.903598
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,405.871984
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,6.736962
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.752023
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,2.580798
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,417.078196
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,4.785148
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,4.481382
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,8.290413
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get XY Tree,132.33915
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get XY Tree,149.825763
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get XY,10.033072
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get XY,10.58286
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get XY Tree,142.366795
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get XY Tree,146.002888
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get XY,10.665175
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get XY Tree,145.973322
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get XY,10.611779
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,147.205138
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get XY,10.749476
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get XY Tree,142.885428
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get XY Tree,142.006568
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get XY Tree,145.685107
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY,10.841613
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get XY,10.661915
+http://l4714-20.info.polymtl.ca:5000/tsp/api/,Get XY Tree,142.2913
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get XY Tree,140.089245
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get XY,10.701788
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get XY,10.867371
+----------------Benchmark-8----------------------------
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Open Trace,1.757047
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,1.790978
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Open Trace,2.859793
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Open Trace,2.97445
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Open Trace,3.047906
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Open Trace,2.997135
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Open Trace,3.178543
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Open Trace,3.225645
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Open Trace,3.373325
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Open Trace,3.227374
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Open Trace,3.495677
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Open Trace,3.510249
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Open Trace,3.527777
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Open Trace,3.656577
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Open Trace,3.569789
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Open Trace,3.605597
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Open Trace,3.615521
+http://l4714-06.info.polymtl.ca:5000/tsp/api/,Open Trace,3.885056
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Open Trace,3.836235
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Create Experiment,2519.509729
+http://l4714-27.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.327271
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Create Experiment,2704.928438
+http://l4714-22.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.385076
+http://l4714-06.info.polymtl.ca:5000/tsp/api/,Create Experiment,2736.886111
+http://l4714-06.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.271568
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Create Experiment,2751.733483
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.334091
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Create Experiment,2763.625474
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.266596
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Create Experiment,2811.911412
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.194031
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Create Experiment,2813.410112
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.33326
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Create Experiment,2817.723896
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.297778
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Create Experiment,2847.526574
+http://l4714-17.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.386281
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Create Experiment,2872.174316
+http://l4714-18.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.267337
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Create Experiment,2883.759978
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Create Experiment,2883.539502
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.269833
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.302296
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Create Experiment,2888.170188
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.273085
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Create Experiment,2893.870904
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.259037
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Create Experiment,2914.518263
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.31613
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Create Experiment,2919.23543
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.299007
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Create Experiment,2920.44582
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.259106
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Create Experiment,2935.624192
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.348936
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,3289.861492
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.315071
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,2627.028822
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,29.667911
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,73.369111
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,2881.125166
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,31.554767
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,48.16733
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3138.576578
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,32.347057
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,43.227885
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3482.768388
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3444.777209
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,23.736283
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,26.425632
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3370.488819
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,18.880766
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,59.655
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,57.880016
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,44.095894
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3430.466358
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,26.885483
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,35.737217
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3704.661215
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3710.740125
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,28.047601
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3734.892509
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3871.109731
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,26.085256
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,34.986498
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,62.817824
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,57.722859
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,67.212967
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3977.943868
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,19.454113
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3575.266031
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,60.314508
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,40.699457
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,87.94916
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,4202.442225
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,26.21357
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,40.60522
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3544.077588
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get XY Tree,2931.619694
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3548.227496
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3113.850339
+http://l4714-07.info.polymtl.ca:5000/tsp/api/,Get XY,712.937306
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3243.631061
+http://l4714-03.info.polymtl.ca:5000/tsp/api/,Get XY,681.81421
+http://l4714-08.info.polymtl.ca:5000/tsp/api/,Get XY,711.199933
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get XY Tree,4049.227528
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3331.861993
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3529.827183
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3693.702143
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get XY Tree,3343.60402
+http://l4714-04.info.polymtl.ca:5000/tsp/api/,Get XY,704.990561
+http://l4714-26.info.polymtl.ca:5000/tsp/api/,Get XY,703.043034
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get XY Tree,4496.221103
+http://l4714-21.info.polymtl.ca:5000/tsp/api/,Get XY,683.112914
+http://l4714-13.info.polymtl.ca:5000/tsp/api/,Get XY,715.024734
+http://l4714-25.info.polymtl.ca:5000/tsp/api/,Get XY,692.2793
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get XY Tree,4546.574679
+http://l4714-16.info.polymtl.ca:5000/tsp/api/,Get XY,704.709783
+http://l4714-14.info.polymtl.ca:5000/tsp/api/,Get XY,690.269749
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get XY Tree,4835.192095
+http://l4714-24.info.polymtl.ca:5000/tsp/api/,Get XY,716.03366
+http://l4714-23.info.polymtl.ca:5000/tsp/api/,Get XY,697.525187
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,4790.423279
+http://l4714-05.info.polymtl.ca:5000/tsp/api/,Get XY,766.357855
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY,694.473442
+---B8
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,3.407098
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,3366.799028
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.300078
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3328.845049
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,30.650035
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,47.2682
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,4653.402197
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY,689.103977
+--B4
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,2.729711
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,279.620273
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.053352
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,221.424722
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,5.379733
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,10.931652
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,140.180439
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY,10.671373
+---B7
+http://172.17.0.3:8080/tsp/api/,Open Trace,1.502967
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.039334
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.960008
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.992197
+http://172.17.0.3:8080/tsp/api/,Create Experiment,727.383921
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.147417
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,445.924425
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,28.002431
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,21.78344
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,635.647974
+http://172.17.0.3:8080/tsp/api/,Get XY,257.728049
+----
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,3.92775
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,3359.463046
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.256024
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,3352.437425
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,43.029501
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,96.342556
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,4551.126691
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY,671.672955
+--
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.876139
+http://172.17.0.3:8080/tsp/api/,Create Experiment,21.942444
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.091927
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,24.245519
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,4.49059
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,6.774635
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,31.420858
+http://172.17.0.3:8080/tsp/api/,Get XY,7.15435
+--
+http://172.17.0.3:8080/tsp/api/,Open Trace,5.630694
+http://172.17.0.3:8080/tsp/api/,Create Experiment,157.55727
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.089978
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,220.568422
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,5.331507
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,15.578334
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,319.516203
+http://172.17.0.3:8080/tsp/api/,Get XY,226.601838
+-------------------------------------------------------------B1
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.815088
+http://172.17.0.3:8080/tsp/api/,Create Experiment,20.596912
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.107249
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,24.273792
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,4.702039
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,7.167749
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,31.9076
+http://172.17.0.3:8080/tsp/api/,Get XY,7.339217
+--
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.940318
+http://172.17.0.3:8080/tsp/api/,Create Experiment,21.410963
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.092512
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,24.265458
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,4.421463
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,6.863073
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,31.876887
+http://172.17.0.3:8080/tsp/api/,Get XY,7.279831
+http://172.17.0.3:8080/tsp/api/,Open Trace,5.768281
+http://172.17.0.3:8080/tsp/api/,Create Experiment,20.624581
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.09339
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,23.975475
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,4.472646
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,7.229382
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,31.513844
+http://172.17.0.3:8080/tsp/api/,Get XY,7.145278
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.719327
+http://172.17.0.3:8080/tsp/api/,Create Experiment,17.626537
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.080091
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,23.983849
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.687147
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.523307
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,1.173596
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.282734
+http://172.17.0.3:8080/tsp/api/,Create Experiment,0.159372
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.082579
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,0.537209
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.628695
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,28.743439
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,160.916708
+http://172.17.0.3:8080/tsp/api/,Get XY,1.236898
+http://172.17.0.3:8080/tsp/api/,Open Trace,5.104887
+http://172.17.0.3:8080/tsp/api/,Create Experiment,0.254666
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.047903
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,0.325869
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.503339
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.403685
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,0.1347
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.877431
+http://172.17.0.3:8080/tsp/api/,Create Experiment,17.067299
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.103767
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,23.080885
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.749729
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.497339
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,1.200835
+http://172.17.0.3:8080/tsp/api/,Open Trace,1.115141
+http://172.17.0.3:8080/tsp/api/,Create Experiment,0.082947
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.039562
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,0.353731
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.555881
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.440346
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,9.103303
+http://172.17.0.3:8080/tsp/api/,Get XY,1.372312
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.914447
+http://172.17.0.3:8080/tsp/api/,Create Experiment,17.280479
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.08376
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,23.810885
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.747394
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.527545
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,30.400318
+http://172.17.0.3:8080/tsp/api/,Get XY,1.326649
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.849736
+http://172.17.0.3:8080/tsp/api/,Create Experiment,17.266119
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.09723
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,24.344928
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.686445
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.575882
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,1.16924
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.899794
+http://172.17.0.3:8080/tsp/api/,Create Experiment,17.451912
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.091133
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,23.968199
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.651436
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.501127
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,1.168095
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.830988
+http://172.17.0.3:8080/tsp/api/,Create Experiment,17.250161
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.083807
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,23.693503
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.726323
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.574017
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,196.747501
+http://172.17.0.3:8080/tsp/api/,Get XY,3.758009
+http://172.17.0.3:8080/tsp/api/,Open Trace,0.89511
+http://172.17.0.3:8080/tsp/api/,Create Experiment,18.425069
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.103768
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,24.526236
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.66763
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.528414
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,30.496793
+http://172.17.0.3:8080/tsp/api/,Get XY,1.364086
+http://172.17.0.3:8080/tsp/api/,Open Trace,1.721937
+http://172.17.0.3:8080/tsp/api/,Create Experiment,17.824701
+http://172.17.0.3:8080/tsp/api/,Get Outputs Descriptors,0.095016
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Tree,23.81594
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph States,1.676199
+http://172.17.0.3:8080/tsp/api/,Get TimeGraph Arrows,0.550357
+http://172.17.0.3:8080/tsp/api/,Get XY Tree,30.201357
+http://172.17.0.3:8080/tsp/api/,Get XY,1.392593

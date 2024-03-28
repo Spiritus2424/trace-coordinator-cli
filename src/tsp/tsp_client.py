@@ -24,6 +24,9 @@
 
 import json
 import requests
+import logging
+import inspect
+
 
 from tsp.trace import Trace
 from tsp.trace_set import TraceSet
@@ -66,6 +69,7 @@ class TspClient:
         Constructor
         '''
         self.base_url = base_url
+        self.logger = logging.getLogger("tsp_client")
 
     def fetch_traces(self):
         '''
@@ -74,12 +78,14 @@ class TspClient:
         :rtype: TspClientResponse
         '''
         api_url = '{0}traces'.format(self.base_url)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.get(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
         if response.status_code == 200:
             return TspClientResponse(TraceSet(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason)
         else:  # pragma: no cover
-            print("get traces failed: {0}".format(response.status_code))
+            self.logger.error(f"get traces failed: {response.status_code}")
             return TspClientResponse(None, response.status_code, response.reason)
 
     def fetch_trace(self, uuid):
@@ -90,12 +96,15 @@ class TspClient:
         :rtype: TspClientResponse
         '''
         api_url = '{0}traces/{1}'.format(self.base_url, uuid)
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.get(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
         if response.status_code == 200:
             return TspClientResponse(Trace(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason)
         else:
-            print("get trace failed: {0}".format(response.status_code))
+            self.logger.error(f"get trace failed: {response.status_code}")
             return TspClientResponse(None, response.status_code, response.reason)
 
     def open_trace(self, path, name):
@@ -110,13 +119,16 @@ class TspClient:
         my_parameters = {'name': name, 'uri': path}
         parameters = {'parameters': my_parameters}
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.post(api_url, json=parameters, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             return TspClientResponse(Trace(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason)
         else:  # pragma: no cover
-            print("post trace failed: {0}".format(response.status_code))
+            self.logger.error(f"post trace failed: {response.status_code}")
             return TspClientResponse(None, response.status_code, response.reason)
 
     def open_traces(self, path, name, max_depth, filter):
@@ -131,18 +143,17 @@ class TspClient:
         my_parameters = {'name': name, 'uri': path, 'maxDepth': max_depth}
         parameters = {'parameters': my_parameters}
 
+        
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.post(api_url, json=parameters, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             response_size = len(bytes(response.text, 'utf-8'))
-            content = json.loads(response.content.decode('utf-8'))
-            traces = []
-            for trace in content:
-                traces.append(Trace(trace))
-            return TspClientResponse(traces,
+            return TspClientResponse(TraceSet(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason, response_size)
         else:  # pragma: no cover
-            print("post trace failed: {0}".format(response.status_code))
+            self.logger.error(f"post trace failed: {response.status_code}")
             return TspClientResponse(None, response.status_code, response.reason)
 
 
@@ -163,7 +174,10 @@ class TspClient:
         if remove_cache:
             parameters['removeCache'] = "true"
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.delete(api_url, json=parameters, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
         if response.status_code == 200:
             return TspClientResponse(Trace(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason)
@@ -178,7 +192,10 @@ class TspClient:
         :rtype: TspClientResponse
         '''
         api_url = '{0}experiments'.format(self.base_url)
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.get(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
         if response.status_code == 200:
             return TspClientResponse(ExperimentSet(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason)
@@ -194,7 +211,10 @@ class TspClient:
         :rtype: TspClientResponse
         '''
         api_url = '{0}experiments/{1}'.format(self.base_url, uuid)
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.get(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
         if response.status_code == 200:
             return TspClientResponse(Experiment(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason)
@@ -210,7 +230,10 @@ class TspClient:
         :rtype: TspClientResponse
         '''
         api_url = '{0}experiments/{1}'.format(self.base_url, uuid)
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.delete(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
         if response.status_code == 200:
             return TspClientResponse(Experiment(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason)
@@ -229,7 +252,10 @@ class TspClient:
         my_parameters = {'name': name, 'traces': traces}
         parameters = {'parameters': my_parameters}
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.post(api_url, json=parameters, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             return TspClientResponse(Experiment(json.loads(response.content.decode('utf-8'))),
@@ -247,7 +273,10 @@ class TspClient:
         '''
         api_url = '{0}experiments/{1}/outputs'.format(self.base_url, exp_uuid)
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.get(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             return TspClientResponse(OutputDescriptorSet(json.loads(
@@ -270,7 +299,10 @@ class TspClient:
         api_url = '{0}experiments/{1}/outputs/{2}'.format(
             self.base_url, exp_uuid, output_id)
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.get(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
         if response.status_code == 200:
             return TspClientResponse(OutputDescriptor(json.loads(response.content.decode('utf-8'))),
                                      response.status_code, response.reason)
@@ -294,7 +326,10 @@ class TspClient:
         if parameters is None:
             params = {}
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.post(api_url, json=params, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
@@ -321,7 +356,10 @@ class TspClient:
                 "parameters": { }
             }
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.post(api_url, json=params, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             response_size = len(bytes(response.text, 'utf-8'))
@@ -351,7 +389,10 @@ class TspClient:
                 "parameters": { }
             }
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.post(api_url, json=params, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             response_size = len(bytes(response.text, 'utf-8'))
@@ -381,7 +422,10 @@ class TspClient:
                 "parameters": { }
             }
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.post(api_url, json=params, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             response_size = len(bytes(response.text, 'utf-8'))
@@ -411,7 +455,10 @@ class TspClient:
                 "parameters": { }
             }
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.post(api_url, json=params, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
@@ -439,7 +486,10 @@ class TspClient:
                 "parameters": { }
             }
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.post(api_url, json=params, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
         
         if response.status_code == 200:
             return TspClientResponse(GenericResponse(json.loads(response.content.decode('utf-8')),
@@ -455,7 +505,9 @@ class TspClient:
         '''
         api_url = '{0}config/types/'.format(self.base_url)
 
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.get(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             return TspClientResponse(ConfigurationSourceSet(json.loads(response.content.decode('utf-8'))),
@@ -470,7 +522,10 @@ class TspClient:
         '''
         api_url = '{0}config/types/{1}'.format(self.base_url, type_id)
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.get(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             return TspClientResponse(ConfigurationSource(json.loads(response.content.decode('utf-8'))),
@@ -486,7 +541,10 @@ class TspClient:
         '''
         api_url = '{0}config/types/{1}/configs'.format(self.base_url, type_id)
 
+
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_begin")
         response = requests.get(api_url, headers=headers)
+        self.logger.info(f"{self.base_url}/{inspect.currentframe().f_code.co_name}_end")
 
         if response.status_code == 200:
             return TspClientResponse(ConfigurationSet(json.loads(response.content.decode('utf-8'))),

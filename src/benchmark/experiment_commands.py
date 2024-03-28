@@ -1,20 +1,28 @@
+import json
 from click import argument, option, Path, pass_obj
 from time import sleep
 from datetime import datetime
 from tsp.tsp_client import TspClient
 from tsp.indexing_status import IndexingStatus
+from tsp.experiment import ExperimentEncoder
+from tsp.output_descriptor_set import OutputDescriptorSetEncoder
+from tsp.trace_set import TraceSet
 from benchmark.commands import benchmark, log_benchmark, log_output, POLLING_TIME
 from animation.waiting import start_waiting_animation, stop_waiting_animation
 
 @benchmark.command(name="create-experiment")
 @argument('EXPERIMENT_NAME', type=str)
 @option('--uuids', type=str, multiple=True, help='List of traces UUID')
-@option('--body', type=Path(exists=True), help='JSON file that contain the body params for the request')
+@option('--trace-set-file', type=Path(exists=True), help='JSON file that contain the response from open or get traces command')
 @option('--debug', '-d', is_flag=True, default=False)
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
-def open_experiment(tsp_client: TspClient, experiment_name: str, uuids: list, body: str, debug: bool, verbose: bool):
+def create_experiment(tsp_client: TspClient, experiment_name: str, uuids: list, trace_set_file: str, debug: bool, verbose: bool):
     print(f"Create Experiment: ", end="")
+    with open(trace_set_file, 'r') as file:
+        trace_set = TraceSet(json.load(file))
+        uuids = extract_traces_uuids(trace_set)
+
     animation_event = start_waiting_animation()
     start = datetime.now()
     response = tsp_client.open_experiment(experiment_name, uuids)
@@ -27,9 +35,9 @@ def open_experiment(tsp_client: TspClient, experiment_name: str, uuids: list, bo
     print(f"{elapsed.total_seconds()}s")
     log_benchmark(tsp_client.base_url, "Create Experiment", elapsed.total_seconds())
 
-
     if verbose:
-        print(f"{response.model.name}:{response.model.UUID}:[{response.model.start},{response.model.end}]" )
+        print(f"{response.model.name}:{response.model.UUID}:[{response.model.start},{response.model.end}]")
+        log_output("Create Experiment", response.model, ExperimentEncoder)
 
 
 @benchmark.command(name="get-experiments")
@@ -57,7 +65,7 @@ def get_experiment(tsp_client: TspClient, uuid: str, verbose: bool):
     log_benchmark(tsp_client.base_url, "Get Experiments", elapsed.total_seconds())
     
     if verbose:
-        print("Experiments: ", len(response.model))
+        print(f"Experiments: {len(response.model)}")
         for experiment in response.model:
             print(f"{experiment.name}:{experiment.UUID}:[{experiment.start},{experiment.end}]")
 
@@ -68,7 +76,6 @@ def get_experiment(tsp_client: TspClient, uuid: str, verbose: bool):
 @option('--verbose', '-v', is_flag=True, default=False)
 @pass_obj
 def get_outputs_descriptors(tsp_client: TspClient, uuid: str, output_id: str, verbose: bool):
-
     print(f"Get Outputs Descriptors: ", end="")
     animation_event = start_waiting_animation()
     start = datetime.now()
@@ -84,6 +91,8 @@ def get_outputs_descriptors(tsp_client: TspClient, uuid: str, output_id: str, ve
     log_benchmark(tsp_client.base_url, "Get Outputs Descriptors", elapsed.total_seconds())
 
     if verbose:
-        log_output("Get Outputs Descriptors", response)
-        # print("Descriptors: ", len(response.model.descriptors))
-        # pprint(json.dumps(response.__dict__,  default=vars))
+        log_output("Get Outputs Descriptors", response.model, OutputDescriptorSetEncoder)
+
+
+def extract_traces_uuids(traceSet: TraceSet): 
+    return [trace.UUID for trace in traceSet.traces]

@@ -2,7 +2,7 @@ from click import argument, option, Path, pass_obj
 from time import sleep
 from datetime import datetime
 from tsp.tsp_client import TspClient, GenericResponse, ModelType
-from tsp.response import ResponseStatus
+from tsp.response import ResponseStatus, GenericResponseEncoder
 from benchmark.commands import benchmark, log_output, log_benchmark, POLLING_TIME
 from animation.waiting import start_waiting_animation, stop_waiting_animation
 import json
@@ -22,10 +22,10 @@ def get_xy_tree_benchmark(tsp_client: TspClient, uuid: str, output_id: str, body
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get XY Tree", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get XY Tree", elapsed.total_seconds())
 
     if verbose:
-        log_output("Get XY Tree", response)
+        log_output("Get XY Tree", response.model, GenericResponseEncoder)
 
 
 
@@ -59,10 +59,10 @@ def get_xy_benchmark(tsp_client: TspClient, uuid: str, output_id: str, start: in
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get XY", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get XY", elapsed.total_seconds())
 
     if verbose:
-        log_output("Get XY", response)
+        log_output("Get XY", response.model, GenericResponseEncoder)
 
 
 ######################################## CONCRETE CASE ################################
@@ -103,10 +103,10 @@ def get_xy_concrete_benchmark(tsp_client: TspClient, uuid: str, output_id: str, 
     elapsed = end - start
     stop_waiting_animation(animation_event)
     print(f"{elapsed.total_seconds()}s")
-    log_benchmark(tsp_client.base_url, "Get XY", elapsed.total_seconds(), response.size)
+    log_benchmark(tsp_client.base_url, "Get XY", elapsed.total_seconds())
 
     if verbose:
-        log_output("Get XY", response)
+        log_output("Get XY", response.model, GenericResponseEncoder)
 
 
 ######################################## FUNCTION ################################

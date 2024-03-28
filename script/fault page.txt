@@ -1,0 +1,6 @@
+export TRACESERVER_PORT=5000
+export TRACING_SERVER_ROOT=/home/tmp
+/usr/bin/time -f="real %e - user %U - sys %S - Major page fault %F - Minor Page Fault %R" ./tracecompass-server
+Benchmark 8 - real 12684.75nuser 0.05nsys 0.01npage fault 4032
+Benchmark 7 - real 2161.36nuser 0.05nsys 0.01nMajor page fault 0nMinor Page Fault 4037
+real 12110.00 - user 0.05 - sys 0.01 - Major page fault 0 - Minor Page Fault 4032

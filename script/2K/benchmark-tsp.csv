@@ -1,3 +1,8 @@
 http://l4714-02.info.polymtl.ca:5000/tsp/api/,Open Trace,3.828244,3761
 http://l4714-02.info.polymtl.ca:5000/tsp/api/,Create Experiment,6332.92509,
 http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get Outputs Descriptors,0.079108,
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Tree,2221.557268,93819072
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph States,46.111893,13192563
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get TimeGraph Arrows,47.617459,127888
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY Tree,5260.420228,
+http://l4714-02.info.polymtl.ca:5000/tsp/api/,Get XY,970.264381,

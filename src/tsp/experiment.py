@@ -21,8 +21,8 @@
 # SOFTWARE.
 
 """Experiment class file."""
-
-from tsp.trace_set import TraceSet
+import json
+from tsp.trace_set import TraceSet, TraceSetEncoder
 from tsp.indexing_status import IndexingStatus
 
 NA = "N/A"
@@ -95,3 +95,17 @@ class Experiment:
         # Array of all the traces contained in the experiment
         if TRACES_TIME_KEY in params:
             self.traces = TraceSet(params.get(TRACES_TIME_KEY))
+
+class ExperimentEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Experiment):
+            return {
+                'UUID': obj.UUID,
+                'name': obj.name,
+                'traces': TraceSetEncoder().default(obj.traces),
+                'start': obj.start,
+                'end': obj.end,
+                'number_of_events': obj.number_of_events,
+                'indexing_status': obj.indexing_status,
+            }
+        return super().default(obj)
